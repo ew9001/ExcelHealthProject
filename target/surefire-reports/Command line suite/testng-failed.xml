@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="example.AppiumiOSTest">
+        <methods>
+          <include name="testiOS"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- example.AppiumiOSTest -->
+      <class name="example.NewTest">
+        <methods>
+          <include name="laodthepage"/>
+        </methods>
+      </class> <!-- example.NewTest -->
+      <class name="example.RedirectTest">
+        <methods>
+          <include name="redirecthepage"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- example.RedirectTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

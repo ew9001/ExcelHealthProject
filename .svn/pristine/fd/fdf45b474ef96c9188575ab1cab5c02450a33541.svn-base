@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Suite - Safari]" parallel="none">
+  <parameter name="browser" value="IE"/>
+  <parameter name="version" value="11"/>
+  <parameter name="platform" value="WINDOWS"/>
+  <test name="Load JustPRBlog Pages - Windows - IE 11(failed)" parallel="none">
+    <parameter name="browser" value="IE"/>
+    <parameter name="version" value="11"/>
+    <parameter name="platform" value="WINDOWS"/>
+    <classes>
+      <class name="example.AppiumiOSTest">
+        <methods>
+          <include name="testiOS"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- example.AppiumiOSTest -->
+    </classes>
+  </test> <!-- Load JustPRBlog Pages - Windows - IE 11(failed) -->
+</suite> <!-- Failed suite [Suite - Safari] -->

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Suite - General ]" parallel="none">
+  <parameter name="browser" value="Chrome"/>
+  <parameter name="version" value="50"/>
+  <parameter name="platform" value="MAC"/>
+  <test name="CoffeeLogin(failed)" parallel="none">
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="version" value="50"/>
+    <parameter name="platform" value="MAC"/>
+    <classes>
+      <class name="example.AllPagesLocal">
+        <methods>
+          <include name="searchmeta"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- example.AllPagesLocal -->
+    </classes>
+  </test> <!-- CoffeeLogin(failed) -->
+</suite> <!-- Failed suite [Suite - General ] -->

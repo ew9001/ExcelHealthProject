@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[=========== Browser Session Started ===========]]>
+    </line>
+    <line>
+      <![CDATA[=========== Application Started ==========]]>
+    </line>
+    <line>
+      <![CDATA[=========== User logged into Test Environment ===========]]>
+    </line>
+    <line>
+      <![CDATA[===User is logged OUT of Test Environment ===]]>
+    </line>
+    <line>
+      <![CDATA[=====Browser Session End=====]]>
+    </line>
+  </reporter-output>
+  <suite name="Suite - General1 " duration-ms="2948" started-at="2017-09-06T01:08:41Z" finished-at="2017-09-06T01:08:44Z">
+    <groups>
+    </groups>
+    <test name="Login" duration-ms="2948" started-at="2017-09-06T01:08:41Z" finished-at="2017-09-06T01:08:44Z">
+      <class name="com.excelhealth.mytest_cases.Login_v2">
+        <test-method status="PASS" signature="setupWebdriver()[pri:0, instance:com.excelhealth.mytest_cases.Login_v2@7f560810]" name="setupWebdriver" is-config="true" duration-ms="2080" started-at="2017-09-05T21:08:39Z" finished-at="2017-09-05T21:08:41Z">
+          <reporter-output>
+            <line>
+              <![CDATA[=========== Browser Session Started ===========]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setupWebdriver -->
+        <test-method status="PASS" signature="setupApplication()[pri:0, instance:com.excelhealth.mytest_cases.Login_v2@7f560810]" name="setupApplication" is-config="true" duration-ms="716" started-at="2017-09-05T21:08:41Z" finished-at="2017-09-05T21:08:42Z">
+          <reporter-output>
+            <line>
+              <![CDATA[=========== Application Started ==========]]>
+            </line>
+            <line>
+              <![CDATA[=========== User logged into Test Environment ===========]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setupApplication -->
+        <test-method status="PASS" signature="test_Home_Page_Login()[pri:0, instance:com.excelhealth.mytest_cases.Login_v2@7f560810]" name="test_Home_Page_Login" duration-ms="2149" started-at="2017-09-05T21:08:42Z" description="This TC will perform valid login" finished-at="2017-09-05T21:08:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Home_Page_Login -->
+        <test-method status="PASS" signature="close_Application()[pri:0, instance:com.excelhealth.mytest_cases.Login_v2@7f560810]" name="close_Application" is-config="true" duration-ms="74" started-at="2017-09-05T21:08:44Z" finished-at="2017-09-05T21:08:44Z">
+          <reporter-output>
+            <line>
+              <![CDATA[===User is logged OUT of Test Environment ===]]>
+            </line>
+            <line>
+              <![CDATA[=====Browser Session End=====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- close_Application -->
+      </class> <!-- com.excelhealth.mytest_cases.Login_v2 -->
+    </test> <!-- Login -->
+  </suite> <!-- Suite - General1  -->
+</testng-results>

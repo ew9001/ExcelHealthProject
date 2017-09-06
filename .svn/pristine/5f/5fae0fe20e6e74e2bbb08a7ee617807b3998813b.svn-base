@@ -1,0 +1,127 @@
+package example;
+ 
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.remote.MobileCapabilityType;
+import jxl.Workbook;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.concurrent.TimeUnit;
+import java.io.FileInputStream;
+import jxl.Sheet;
+
+import jxl.Workbook;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Rotatable;
+import org.openqa.selenium.ScreenOrientation;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.Augmenter;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+ 
+@SuppressWarnings("unused")
+public class AppiumiOSTest {
+	
+	private String baseUrl;	
+	private IOSDriver driver;
+	static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+	Sheet s;
+
+	
+	
+	@BeforeMethod
+	public void setUp() throws IOException {
+		DesiredCapabilities caps = new DesiredCapabilities();
+		//caps.setCapability("platformName", "iOS");
+		caps.setCapability("platformVersion", "9.3"); //Replace this with your iOS version
+		caps.setCapability("deviceName", "iPhone 6"); //Replace this with your simulator/device version
+		caps.setCapability("app", "safari"); //Replace this with app path in your system
+		caps.setCapability("rotatable", true);
+		// caps.setCapability(MobileCapabilityType.TAKES_SCREENSHOT, "true");
+
+		driver = new IOSDriver(new URL("http://0.0.0.0:4723/wd/hub"), caps);
+		
+		baseUrl = "http://www.cnn.com";
+		
+		
+	}
+	
+	@Test
+	public void testiOS() throws InterruptedException {
+		// this.driver.get(baseUrl);
+		
+
+
+		
+		try {
+			
+			FileInputStream fi = new FileInputStream("//Users/earl.willis/Desktop/all.xls");
+
+			Workbook w = Workbook.getWorkbook(fi);
+
+			s = w.getSheet(0);
+			
+			for(int row=1; row <=s.getRows();row++) {
+
+			String urlname = s.getCell(0, row).getContents();
+
+			
+			WebDriver augmentedDriver0 = new Augmenter().augment(driver);
+			((Rotatable)augmentedDriver0).rotate(ScreenOrientation.PORTRAIT);
+			
+			driver.get(urlname);
+			
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			
+			WebDriver augmentedDriver = new Augmenter().augment(driver);
+			((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
+
+			
+			//Second tap on the screen and swipe it left using moveTo function
+		//	tAction.press(endx+20,endy+20).moveTo(startx+20,starty+20).release().perform();
+		//	Thread.sleep(1000);
+			
+			System.out.println(urlname);
+
+			
+			//File scrFile1 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+			//FileUtils.copyFile(scrFile1, new File("Y://Screenshots/PageLoads/" + row + " - " + timeStamp + "page.png"));
+		}
+
+			
+
+			
+
+
+		} catch (Throwable T) {
+		    
+
+			 driver.quit();
+			
+			System.out.println("End of the line");
+		}
+
+
+	}
+	
+	
+	
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
+	}
+	
+}

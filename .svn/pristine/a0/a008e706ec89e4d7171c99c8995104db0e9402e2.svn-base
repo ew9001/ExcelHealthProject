@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Suite - General ]" parallel="none">
+  <parameter name="browser" value="Chrome"/>
+  <parameter name="version" value="50"/>
+  <parameter name="platform" value="WINDOWS"/>
+  <test name="CoffeeLogin(failed)" parallel="none">
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="version" value="50"/>
+    <parameter name="platform" value="WINDOWS"/>
+    <classes>
+      <class name="example.AllPages">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="laodthepage"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- example.AllPages -->
+    </classes>
+  </test> <!-- CoffeeLogin(failed) -->
+</suite> <!-- Failed suite [Suite - General ] -->

@@ -1,0 +1,325 @@
+package example;
+
+
+
+import java.awt.AWTException;
+
+import java.awt.List;
+
+import java.awt.Robot;
+
+import java.io.File;
+
+import java.io.FileInputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.thoughtworks.selenium.webdriven.commands.GetAttribute;
+
+import java.text.SimpleDateFormat;
+
+import java.util.Calendar;
+
+import java.util.NoSuchElementException;
+
+import java.util.concurrent.TimeUnit;
+
+
+
+import jxl.Sheet;
+
+import jxl.Workbook;
+
+
+
+import org.apache.commons.io.FileUtils;
+
+import org.openqa.selenium.By;
+
+import org.openqa.selenium.OutputType;
+
+import org.openqa.selenium.Rotatable;
+
+import org.openqa.selenium.ScreenOrientation;
+
+import org.openqa.selenium.TakesScreenshot;
+
+import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.WebElement;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+@SuppressWarnings("unused")
+public class localMetaStrip{
+	
+	public static final String USERNAME = "adametline1";
+	public static final String AUTOMATE_KEY = "vnKxs64wV8L1bcWxyzUg";
+	public static final String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+	public WebDriver driver;
+	
+	
+Sheet s;
+
+private StringBuffer verificationErrors = new StringBuffer();
+
+static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+
+
+@BeforeTest
+
+
+public void beforeClass() throws Exception {
+   
+	
+    driver = new FirefoxDriver();
+
+}
+
+
+@Test
+
+public void validatemeta() throws Exception {
+
+FileInputStream fi = new FileInputStream("//Users/earl.willis/Desktop/allpages2.xls");
+
+Workbook w = Workbook.getWorkbook(fi);
+
+s = w.getSheet(0);
+
+
+
+
+try {
+
+
+for(int row=1; row <=s.getRows();row++) {
+
+String urlname = s.getCell(0, row).getContents();
+
+driver.get(urlname);
+
+driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+System.out.println(urlname);
+String myTitle = driver.getTitle();
+System.out.println("Title: " + driver.getTitle());
+
+
+// String ImageContent = driver.findElement(By.xpath("//meta[@name='og:description']")).getAttribute("content");
+
+if(driver.findElements(By.xpath("//meta[@name='description']")).size() != 0){
+// System.out.println("Element is Present");
+System.out.println("Meta Description: " + driver.findElement(By.xpath("//meta[@name='description']")).getAttribute("content"));
+
+}else{
+System.out.println("Element is Absent");
+}
+
+
+if(driver.findElements(By.xpath("//meta[@name='og:description']")).size() != 0){
+// System.out.println("Element is Present");
+System.out.println("Meta OG Description:" + driver.findElement(By.xpath("//meta[@name='og:description']")).getAttribute("content"));
+
+
+}else{
+System.out.println("There is NO OG DESCR");
+
+}
+
+//if(driver.findElements(By.xpath("//meta[@name='description']")).isEmpty()){
+	
+//	System.out.println("Descrition - NULL");
+
+
+//}else{
+//	WebElement descriptionEl = driver.findElement(By.xpath("//meta[@property='description']"));
+//	String DescriptionContent = descriptionEl.getAttribute("content");
+//	System.out.println("Description: " + DescriptionContent);
+
+
+//	}
+
+
+
+
+//if(!driver.findElements(By.xpath("//meta[@name='og:description']")).isEmpty()){
+//	System.out.println("OG: Descrition - NULL");
+	
+//}else{
+//	WebElement OGdescriptionEl = driver.findElement(By.xpath("//meta[@property='og:description']"));
+//	String OGDescriptionContent = OGdescriptionEl.getAttribute("content");
+//	System.out.println("OG Description: " + OGDescriptionContent);
+
+
+//}
+
+
+//WebElement OGtitleEl=driver.findElement(By.xpath("//meta[@property='og:title']"));
+//String OGtitleContent = OGtitleEl.getAttribute("content");
+//System.out.println("OG Title: " + OGtitleContent);
+
+//--------
+//	boolean exists = driver.findElement(By.xpath("//meta[@name='description']")).getAttribute("content") == null;
+// System.out.println("Meta Description: " + driver.findElement(By.xpath("//meta[@name='description']")).getAttribute("content"));
+
+//String XPath = "//meta[@property='description']";
+//Boolean iselementpresent = driver.findElements(By.xpath(XPath)).size()!= 0;
+
+
+
+
+
+//if(!driver.findElements(By.xpath("//meta[@property='description']")).isEmpty()){
+//	System.out.println("NULL");
+
+//}else{
+
+//	System.out.println("Meta Description:" + driver.findElement(By.xpath("//meta[@name='description']"))
+//	.getAttribute("content"));
+//}
+
+
+
+
+
+
+//String DescriptionContent = descriptionEl.getAttribute("content");
+// System.out.println("Description: " + DescriptionContent);
+
+//if(!DescriptionContent.isEmpty()) {   
+
+//	System.out.println("Description: NULL" ); 
+
+//    }else{
+
+//    	System.out.println("Description: " + DescriptionContent);
+
+//   }
+
+
+
+//WebElement OGDescriptionEl=driver.findElement(By.xpath("//meta[@property='og:description']"));
+//String OGDescriptionContent = OGDescriptionEl.getAttribute("content");
+//System.out.println("OG Description: " + OGDescriptionContent);
+
+}
+
+} catch (Throwable T) {
+    
+
+	driver.quit();
+	
+	System.out.println("End of the line");
+}
+
+//WebElement ImageEl=driver.findElement(By.xpath("//meta[@property='og:image']"));
+//String ImageContent = ImageEl.getAttribute("content");
+//System.out.println("OG Image: " + ImageContent);
+
+
+// System.out.println("Meta Keywords:" + driver.findElement(By.xpath("//meta[@name='keywords']"))
+//.getAttribute("content"));
+
+
+System.out.println("Meta Keywords:" + driver.findElement(By.xpath("//meta[@name='keywords']"))
+.getAttribute("content"));
+
+
+
+
+
+
+
+// java.util.List<WebElement> list=driver.findElements(By.xpath("//a"));
+
+// for(WebElement link:list)                             
+
+//{
+
+//  System.out.println(link.getText());
+  
+//}
+
+
+//try {
+
+ //       (new Robot()).keyPress(java.awt.event.KeyEvent.VK_ENTER);
+
+ //        (new Robot()).keyRelease(java.awt.event.KeyEvent.VK_ENTER);
+
+ //        } catch (AWTException e) {
+
+                // TODO Auto-generated catch block
+
+ //               e.printStackTrace();
+
+ //           }
+
+
+
+//File scrFile1 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+// FileUtils.copyFile(scrFile1, new File("Y://Screenshots/PageLoads/" + timeStamp + "/" + row + "-" + myTitle + "-" + "page.png"));
+
+
+
+
+
+}
+
+
+
+
+
+
+
+private boolean isElementPresent(By cssSelector) {
+
+// TODO Auto-generated method stub
+
+return false;
+
+}
+
+
+
+
+
+@AfterClass
+
+public void tearDown() throws Exception {
+
+ 
+
+    driver.quit();
+
+    String verificationErrorString = verificationErrors.toString();
+
+    if (!"".equals(verificationErrorString)) {
+
+      fail(verificationErrorString);
+
+    }
+
+  }
+
+
+
+
+
+private void fail(String verificationErrorString) {
+	// TODO Auto-generated method stub
+	
+}
+
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Suite - General1 ]" parallel="none">
+  <parameter name="browser" value="Android"/>
+  <parameter name="version" value="4"/>
+  <parameter name="platform" value="ANDROID"/>
+  <test name="Login(failed)" parallel="none">
+    <parameter name="browser" value="Android"/>
+    <parameter name="version" value="4"/>
+    <parameter name="platform" value="ANDROID"/>
+    <classes>
+      <class name="com.excelhealth.mytest_cases.Login_v2">
+        <methods>
+          <include name="add_task"/>
+          <include name="setupApplication"/>
+          <include name="setupWebdriver"/>
+        </methods>
+      </class> <!-- com.excelhealth.mytest_cases.Login_v2 -->
+    </classes>
+  </test> <!-- Login(failed) -->
+</suite> <!-- Failed suite [Suite - General1 ] -->

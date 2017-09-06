@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" parallel="none">
+  <parameter name="browser" value="iPad"/>
+  <parameter name="version" value="2.0"/>
+  <parameter name="platform" value="Any"/>
+  <test name="First Test - Registration - iPad Air 2(failed)" parallel="none">
+    <parameter name="browser" value="iPad"/>
+    <parameter name="version" value="2.0"/>
+    <parameter name="platform" value="Any"/>
+    <classes>
+      <class name="CloudRedirect">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterMethod"/>
+          <include name="afterClass"/>
+          <include name="beforeMethod"/>
+          <include name="registration"/>
+        </methods>
+      </class> <!-- CloudRedirect -->
+    </classes>
+  </test> <!-- First Test - Registration - iPad Air 2(failed) -->
+</suite> <!-- Failed suite [Suite] -->

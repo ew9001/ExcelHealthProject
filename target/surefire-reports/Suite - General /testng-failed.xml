@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Suite - General ]" parallel="none">
+  <parameter name="browser" value="Android"/>
+  <parameter name="version" value="4"/>
+  <parameter name="platform" value="ANDROID"/>
+  <test name="Add Favorite (failed)" parallel="none">
+    <parameter name="browser" value="Android"/>
+    <parameter name="version" value="4"/>
+    <parameter name="platform" value="ANDROID"/>
+    <classes>
+      <class name="example.Login">
+        <methods>
+          <include name="tearDown"/>
+          <include name="beforeClass"/>
+          <include name="takeScreenShotOnFailure"/>
+        </methods>
+      </class> <!-- example.Login -->
+      <class name="example.AddFavorite">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="usercanaddfavorite"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- example.AddFavorite -->
+    </classes>
+  </test> <!-- Add Favorite (failed) -->
+</suite> <!-- Failed suite [Suite - General ] -->

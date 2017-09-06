@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite - General ]" parallel="none">
+  <parameter name="browser" value="IE"/>
+  <parameter name="version" value="11"/>
+  <parameter name="platform" value="WINDOWS"/>
+  <test name="Redirect - Test (failed)" parallel="none">
+    <classes>
+      <class name="example.AppiumiOSTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- example.AppiumiOSTest -->
+      <class name="example.RedirectTest">
+        <methods>
+          <include name="redirecthepage"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- example.RedirectTest -->
+    </classes>
+  </test> <!-- Redirect - Test (failed) -->
+</suite> <!-- Failed suite [Suite - General ] -->

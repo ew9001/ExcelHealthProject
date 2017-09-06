@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite - General " duration-ms="27712" started-at="2016-09-16T20:44:04Z" finished-at="2016-09-16T20:44:32Z">
+    <groups>
+    </groups>
+    <test name="CoffeeLogin" duration-ms="27712" started-at="2016-09-16T20:44:04Z" finished-at="2016-09-16T20:44:32Z">
+      <class name="example.BrokenLinks">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:example.BrokenLinks@54a097cc]" name="setUp" is-config="true" duration-ms="3541" started-at="2016-09-16T16:44:04Z" finished-at="2016-09-16T16:44:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateInvalidLinks()[pri:0, instance:example.BrokenLinks@54a097cc]" name="validateInvalidLinks" duration-ms="24078" started-at="2016-09-16T16:44:07Z" finished-at="2016-09-16T16:44:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateInvalidLinks -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:example.BrokenLinks@54a097cc]" name="tearDown" is-config="true" duration-ms="87" started-at="2016-09-16T16:44:32Z" finished-at="2016-09-16T16:44:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- example.BrokenLinks -->
+    </test> <!-- CoffeeLogin -->
+  </suite> <!-- Suite - General  -->
+</testng-results>

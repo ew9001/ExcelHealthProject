@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite - Safari]" parallel="none">
+  <parameter name="browser" value="IE"/>
+  <parameter name="version" value="11"/>
+  <parameter name="platform" value="WINDOWS"/>
+  <test name="Load JustPRBlog Pages - Windows - IE 11(failed)" parallel="none">
+    <parameter name="browser" value="IE"/>
+    <parameter name="version" value="11"/>
+    <parameter name="platform" value="WINDOWS"/>
+    <classes>
+      <class name="RedirectTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- RedirectTest -->
+      <class name="AllPagesLocal">
+        <methods>
+          <include name="searchmeta"/>
+          <include name="tearDown"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- AllPagesLocal -->
+    </classes>
+  </test> <!-- Load JustPRBlog Pages - Windows - IE 11(failed) -->
+</suite> <!-- Failed suite [Suite - Safari] -->
