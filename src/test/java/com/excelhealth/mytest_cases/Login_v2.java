@@ -63,6 +63,12 @@ public class Login_v2 extends BaseClass {
         objLogin.loginToGuru99("EarlW", "upwork");
         Thread.sleep(1000);
 
+
+        objLogin.clickLogout();
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+
+        objLogin.assertHomePage();
+
     }
 
 

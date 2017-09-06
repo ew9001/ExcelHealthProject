@@ -4,18 +4,19 @@
   <parameter name="browser" value="Android"/>
   <parameter name="version" value="4"/>
   <parameter name="platform" value="ANDROID"/>
-  <test name="Login(failed)" parallel="none">
+  <test name="Login2(failed)" parallel="none">
     <parameter name="browser" value="Android"/>
     <parameter name="version" value="4"/>
     <parameter name="platform" value="ANDROID"/>
     <classes>
-      <class name="com.excelhealth.mytest_cases.Login_v2">
+      <class name="com.excelhealth.mytest_cases.ExtentReportClass">
         <methods>
-          <include name="add_task"/>
-          <include name="setupApplication"/>
-          <include name="setupWebdriver"/>
+          <include name="skipTest"/>
+          <include name="startReport"/>
+          <include name="failTest"/>
+          <include name="passTest"/>
         </methods>
-      </class> <!-- com.excelhealth.mytest_cases.Login_v2 -->
+      </class> <!-- com.excelhealth.mytest_cases.ExtentReportClass -->
     </classes>
-  </test> <!-- Login(failed) -->
+  </test> <!-- Login2(failed) -->
 </suite> <!-- Failed suite [Suite - General1 ] -->

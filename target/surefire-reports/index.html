@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite_-_General1_">
-              <span class="suite-name border-passed">Suite - General1 </span>
+              <span class="suite-name border-skipped">Suite - General1 </span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -53,7 +53,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Suite_-_General1_">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">4 methods,  3 skipped,  1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite_-_General1_" class="hide-methods skipped suite-Suite_-_General1_"> (hide)</a> <!-- hide-methods skipped suite-Suite_-_General1_ -->
+                      <a href="#" panel-name="suite-Suite_-_General1_" class="show-methods skipped suite-Suite_-_General1_"> (show)</a> <!-- show-methods skipped suite-Suite_-_General1_ -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite_-_General1_">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_-_General1_" title="com.excelhealth.mytest_cases.ExtentReportClass" hash-for-method="failTest">failTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_-_General1_" title="com.excelhealth.mytest_cases.ExtentReportClass" hash-for-method="passTest">passTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_-_General1_" title="com.excelhealth.mytest_cases.ExtentReportClass" hash-for-method="skipTest">skipTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite_-_General1_ -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,7 +125,7 @@
                     <div class="method-list-content passed suite-Suite_-_General1_">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite_-_General1_" title="com.excelhealth.mytest_cases.Login_v2" hash-for-method="test_Home_Page_Login">test_Home_Page_Login</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_-_General1_" title="com.excelhealth.mytest_cases.TestMeNow" hash-for-method="PrintMe">PrintMe</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite_-_General1_ -->
@@ -116,19 +140,46 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite_-_General1_" class="panel Suite_-_General1_">
-          <div class="suite-Suite_-_General1_-class-passed">
+          <div class="suite-Suite_-_General1_-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.excelhealth.mytest_cases.Login_v2</span>
+              <img src="skipped.png"/>
+              <span class="class-name">com.excelhealth.mytest_cases.ExtentReportClass</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="test_Home_Page_Login">
-                  </a> <!-- test_Home_Page_Login -->
-                  <span class="method-name">test_Home_Page_Login</span>
-                  <em>
-(This TC will perform valid login)                  </em>
+                  <a name="failTest">
+                  </a> <!-- failTest -->
+                  <span class="method-name">failTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="passTest">
+                  </a> <!-- passTest -->
+                  <span class="method-name">passTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="skipTest">
+                  </a> <!-- skipTest -->
+                  <span class="method-name">skipTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_-_General1_-class-skipped -->
+          <div class="suite-Suite_-_General1_-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.excelhealth.mytest_cases.TestMeNow</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="PrintMe">
+                  </a> <!-- PrintMe -->
+                  <span class="method-name">PrintMe</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -143,12 +194,20 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite verbose=&quot;0&quot; name=&quot;Suite - General1 &quot; parallel=&quot;none&quot;&gt;
+  &lt;test name=&quot;Login2&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;Android&quot;/&gt;
+    &lt;parameter name=&quot;version&quot; value=&quot;4&quot;/&gt;
+    &lt;parameter name=&quot;platform&quot; value=&quot;ANDROID&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.excelhealth.mytest_cases.ExtentReportClass&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Login2 --&gt;
   &lt;test name=&quot;Login&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;Android&quot;/&gt;
     &lt;parameter name=&quot;version&quot; value=&quot;4&quot;/&gt;
     &lt;parameter name=&quot;platform&quot; value=&quot;ANDROID&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.excelhealth.mytest_cases.Login_v2&quot;/&gt;
+      &lt;class name=&quot;com.excelhealth.mytest_cases.TestMeNow&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Login --&gt;
 &lt;/suite&gt; &lt;!-- Suite - General1  --&gt;
@@ -161,6 +220,9 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
+              <li>
+                <span class="test-name">Login2 (1 class)</span>
+              </li>
               <li>
                 <span class="test-name">Login (1 class)</span>
               </li>
@@ -188,16 +250,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'test_Home_Page_Login')
-data.setCell(0, 2, 'com.excelhealth.mytest_cases.Login_v2')
-data.setCell(0, 3, 2149);
+data.setCell(0, 1, 'PrintMe')
+data.setCell(0, 2, 'com.excelhealth.mytest_cases.TestMeNow')
+data.setCell(0, 3, 1);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'passTest')
+data.setCell(1, 2, 'com.excelhealth.mytest_cases.ExtentReportClass')
+data.setCell(1, 3, 0);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'skipTest')
+data.setCell(2, 2, 'com.excelhealth.mytest_cases.ExtentReportClass')
+data.setCell(2, 3, 0);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'failTest')
+data.setCell(3, 2, 'com.excelhealth.mytest_cases.ExtentReportClass')
+data.setCell(3, 3, 0);
 window.suiteTableData['Suite_-_General1_']= { tableData: data, tableDiv: 'times-div-Suite_-_General1_'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 1 ms</span>
               <div id="times-div-Suite_-_General1_">
               </div> <!-- times-div-Suite_-_General1_ -->
             </div> <!-- times-div -->
@@ -208,6 +282,14 @@ return data;
             <span class="header-content">Reporter output for Suite - General1 </span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">PrintMe</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">=========== This is a test to see if my classes are running ===========</span>
+                <span class="reporter-method-output">====== SUCCESS =====</span>
+                <span class="reporter-method-output">=========== Test is complete ===========</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite_-_General1_" class="panel">
@@ -223,23 +305,32 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.excelhealth.mytest_cases.Login_v2</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
-                <span class="method-name">setupWebdriver</span>
+              <div class="chronological-class-name">com.excelhealth.mytest_cases.ExtentReportClass</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">startReport</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
-              <div class="configuration-class before">
-                <span class="method-name">setupApplication</span>
-                <span class="method-start">2086 ms</span>
-              </div> <!-- configuration-class before -->
+              </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">test_Home_Page_Login</span>
-                <span class="method-start">2804 ms</span>
+                <span class="method-name">failTest</span>
+                <span class="method-start">15 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">close_Application</span>
-                <span class="method-start">4953 ms</span>
-              </div> <!-- configuration-class after -->
+              <div class="test-method">
+                <span class="method-name">passTest</span>
+                <span class="method-start">16 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">skipTest</span>
+                <span class="method-start">17 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.excelhealth.mytest_cases.TestMeNow</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">PrintMe</span>
+                <span class="method-start">159 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

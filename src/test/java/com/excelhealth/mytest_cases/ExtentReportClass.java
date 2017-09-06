@@ -31,10 +31,10 @@ public class ExtentReportClass{
     public void startReport(){
 
        // htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") +"/test-output/STMExtentReport.html");
-        htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") +"/test-output/STMExtentReport.html");
+        htmlReporter = new ExtentHtmlReporter("//Users/earl.willis/Desktop/testfolder/STMExtentReport.html");
         extent = new ExtentReports ();
         extent.attachReporter(htmlReporter);
-        extent.setSystemInfo("Host Name", "SoftwareTestingMaterial");
+        extent.setSystemInfo("Host Name", "SoftwareTestingMatersial");
         extent.setSystemInfo("Environment", "Automation Testing");
         extent.setSystemInfo("User Name", "Rajkumar SM");
 

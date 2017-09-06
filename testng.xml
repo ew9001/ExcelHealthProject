@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite - General1 " parallel="none">
- <test name="Login">
-    <parameter name="browser" value="Android"/>
-    <parameter name="version" value="4"/>
-    <parameter name="platform" value="ANDROID"/>
-    <classes>
-      <class name="com.excelhealth.mytest_cases.Login_v2"/>
-    </classes>
- </test>
+    <test name="Login">
+        <parameter name="browser" value="Android"/>
+        <parameter name="version" value="4"/>
+        <parameter name="platform" value="ANDROID"/>
+        <classes>
+            <class name="com.excelhealth.mytest_cases.Login_v2"/>
+        </classes>
+    </test>
 
 
 

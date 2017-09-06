@@ -3,7 +3,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-import java.util.concurrent.TimeUnit;
 
 
 public class Guru99Login {
@@ -23,12 +22,14 @@ public class Guru99Login {
 
     public Guru99Login(WebDriver driver){
 
-      //  this.driver = driver;
-        this.driver = driver;
+       this.driver = driver;
+
 
     }
 
-    //Set user name in textbox
+    /**
+     *  Set UserName
+     */
 
     public void setUserName(String strUserName){
 
@@ -37,7 +38,9 @@ public class Guru99Login {
 
     }
 
-
+    /**
+     *  Set Password
+     */
 
     //Set password in password textbox
 
@@ -47,7 +50,9 @@ public class Guru99Login {
 
     }
 
-
+    /**
+     *  Click the Login button
+     */
 
     //Click on login button
 
@@ -58,18 +63,33 @@ public class Guru99Login {
     }
 
 
+    /**
+     * Will Click the logout button
+     */
+
     public void clickLogout(){
 
         driver.findElement(By.linkText("Logout")).click();
 
-
     }
 
-    public void assertHome(){
 
-        String actual_text = driver.findElement(By.cssSelector("h5")).getText();
-        Assert.assertEquals(actual_text, "Welcome to the Excel Health:");
+    /**
+     * Use this interface when you have a title on your home page. I'm asserting on the H5
+     */
 
+
+    /**
+     * Assert Home Page H5  'Welcome to the Excel Health:'
+     */
+
+    public void assertHomePage (){
+
+
+//        String actualTitle = driver.getTitle();
+
+        String actualTitle = driver.findElement(By.cssSelector("h5")).getText();
+        Assert.assertEquals(actualTitle, "Welcome to the Excel Health:");
 
     }
 
