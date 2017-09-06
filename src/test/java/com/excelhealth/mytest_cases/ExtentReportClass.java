@@ -56,7 +56,7 @@ public class ExtentReportClass{
         extent.setSystemInfo("User Name", "Excel Health");
 
         htmlReporter.config().setDocumentTitle("Title of the Report Comes here");
-        htmlReporter.config().setReportName("Name of the Report Comes here");
+        htmlReporter.config().setReportName("Excel QA Report");
         htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
         htmlReporter.config().setTheme(Theme.STANDARD);
     }
@@ -104,6 +104,7 @@ public class ExtentReportClass{
     public void skipTest(){
         logger = extent.createTest("skipTest");
         throw new SkipException("Skipping - This is not ready for testing ");
+
     }
 
     @AfterMethod
