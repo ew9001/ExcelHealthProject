@@ -1,4 +1,5 @@
 package com.excelhealth.page_objects;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -16,6 +17,8 @@ public class Guru99Login {
     By titleText =By.className("barone");
 
     By login = By.name("Login");
+
+
 
 
 
@@ -67,11 +70,12 @@ public class Guru99Login {
      * Will Click the logout button
      */
 
-    public void clickLogout(){
-
-        driver.findElement(By.linkText("Logout")).click();
-
-    }
+//    public void clickLogout(){
+//       // driver.findElement(logout).click();
+//
+//       driver.findElement(By.linkText("Logout")).click();
+//
+//    }
 
 
     /**

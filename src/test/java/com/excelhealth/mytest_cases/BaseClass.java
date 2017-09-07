@@ -18,14 +18,17 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.chrome.ChromeOptions;
+import java.lang.String;
 
 public class BaseClass {
 
 
     WebDriver driver;
     static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
-    Guru99Home objLogout;
-    Guru99Login LoginPage;
+    Guru99Home objHome;
+    Guru99Login objLogin;
+
+
 
     @BeforeSuite
     public void setupWebdriver() {
@@ -39,26 +42,19 @@ public class BaseClass {
 
 
         ChromeOptions options = new ChromeOptions();
-       // options.addArguments("headless");
+        // options.addArguments("headless");
         options.addArguments("window-size=1440x1280");
 
         driver = new ChromeDriver(options);
 
         Reporter.log("=========== Browser Session Started ===========", true);
 
-    }
-
-
-    @BeforeClass
-
-    public void setupApplication() {
-
         /**
          * Fetch URL and validate application started successfully
          */
 
         driver.get("http://trial.excelhealthportal.com/");
-      //  driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        //  driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         // driver.manage().window().setSize(new Dimension(1440, 1280));
 
         Reporter.log("=========== Application Started ==========", true);
@@ -68,9 +64,32 @@ public class BaseClass {
          * Log-in to application
          */
 
-        //login to application
+    }
 
+
+    @BeforeTest
+
+    public void setupApplication() {
+
+/*        driver.findElement(By.name("Username")).clear();
+        driver.findElement(By.name("Username")).sendKeys("EarlW");
+     //   Thread.sleep(500);
+        driver.findElement(By.name("Password")).clear();
+        driver.findElement(By.name("Password")).sendKeys("upwork");
+        driver.findElement(By.name("Login")).click();*/
+
+        objLogin = new Guru99Login(driver);
+
+        //login to application
+        objLogin.loginToGuru99("EarlW", "upwork");
+
+
+
+
+        //login to application
       //  LoginPage.loginToGuru99("EarlW", "upwork");
+
+        //  LoginPage.loginToGuru99("EarlW", "upwork");
 
 
 
@@ -105,7 +124,8 @@ public class BaseClass {
          * Log-out of application application
          */
 
-     //   LoginPage.clickLogout();
+        objHome = new Guru99Home(driver);
+        objHome.clickLogout();
 
         Reporter.log("===User is logged OUT of Test Environment ===", true);
 
@@ -113,7 +133,7 @@ public class BaseClass {
          * Assertion on presence of home page object
          */
 
-      //  LoginPage.assertHome();
+        //  LoginPage.assertHome();
 
 
         driver.quit();
@@ -135,4 +155,3 @@ public class BaseClass {
     }
 
 }
-

@@ -1,30 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="3" failed="0" total="3" passed="0">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
+    <line>
+      <![CDATA[=========== Browser Session Started ===========]]>
+    </line>
+    <line>
+      <![CDATA[=========== Application Started ==========]]>
+    </line>
+    <line>
+      <![CDATA[=========== User logged into Test Environment ===========]]>
+    </line>
+    <line>
+      <![CDATA[===User is logged OUT of Test Environment ===]]>
+    </line>
+    <line>
+      <![CDATA[=====Browser Session End=====]]>
+    </line>
   </reporter-output>
-  <suite name="Suite - General1 " duration-ms="16" started-at="2017-09-06T03:25:24Z" finished-at="2017-09-06T03:25:24Z">
+  <suite name="Suite - General1 " duration-ms="124" started-at="2017-09-07T04:52:57Z" finished-at="2017-09-07T04:52:57Z">
     <groups>
     </groups>
-    <test name="Login" duration-ms="16" started-at="2017-09-06T03:25:24Z" finished-at="2017-09-06T03:25:24Z">
-      <class name="com.excelhealth.mytest_cases.ExtentReportClass">
-        <test-method status="FAIL" signature="startReport()[pri:0, instance:com.excelhealth.mytest_cases.ExtentReportClass@4590c9c3]" name="startReport" is-config="true" duration-ms="0" started-at="2017-09-05T23:25:24Z" finished-at="2017-09-05T23:25:24Z">
-          <exception class="java.lang.NoClassDefFoundError">
+    <test name="Login" duration-ms="124" started-at="2017-09-07T04:52:57Z" finished-at="2017-09-07T04:52:57Z">
+      <class name="com.excelhealth.mytest_cases.Login_v2">
+        <test-method status="PASS" signature="setupWebDriver()[pri:0, instance:com.excelhealth.mytest_cases.Login_v2@2344fc66]" name="setupWebDriver" is-config="true" duration-ms="1298" started-at="2017-09-07T00:52:56Z" finished-at="2017-09-07T00:52:57Z">
+          <reporter-output>
+            <line>
+              <![CDATA[=========== Browser Session Started ===========]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setupWebDriver -->
+        <test-method status="PASS" signature="setupApplication()[pri:0, instance:com.excelhealth.mytest_cases.Login_v2@2344fc66]" name="setupApplication" is-config="true" duration-ms="0" started-at="2017-09-07T00:52:57Z" finished-at="2017-09-07T00:52:57Z">
+          <reporter-output>
+            <line>
+              <![CDATA[=========== Application Started ==========]]>
+            </line>
+            <line>
+              <![CDATA[=========== User logged into Test Environment ===========]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setupApplication -->
+        <test-method status="FAIL" signature="test_Home_Page_Login()[pri:0, instance:com.excelhealth.mytest_cases.Login_v2@2344fc66]" name="test_Home_Page_Login" duration-ms="36" started-at="2017-09-07T00:52:57Z" description="This TC will perform valid login" finished-at="2017-09-07T00:52:57Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[com/aventstack/extentreports/reporter/ExtentHtmlReporter]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"name","selector":"Username"}
+  (Session info: chrome=61.0.3163.79)
+  (Driver info: chromedriver=2.31.488774 (7e15618d1bf16df8bf0ecf2914ed1964a387ba0b),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 31 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'US-NYC-WKS16116.globalservs.com', ip: '10.142.100.112', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_91'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488774 (7e15618d1bf16df8bf0ecf2914ed1964a387ba0b), userDataDir=/var/folders/h6/7n562mb125g9m3y_n6ygbwqw0rymmr/T/.org.chromium.Chromium.JygvcT}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.79, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: c265857526aaa02dc9f1e1f0b890bebb
+*** Element info: {Using=name, value=Username}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NoClassDefFoundError: com/aventstack/extentreports/reporter/ExtentHtmlReporter
-	at com.excelhealth.mytest_cases.ExtentReportClass.startReport(ExtentReportClass.java:49)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"name","selector":"Username"}
+  (Session info: chrome=61.0.3163.79)
+  (Driver info: chromedriver=2.31.488774 (7e15618d1bf16df8bf0ecf2914ed1964a387ba0b),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 31 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'US-NYC-WKS16116.globalservs.com', ip: '10.142.100.112', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_91'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488774 (7e15618d1bf16df8bf0ecf2914ed1964a387ba0b), userDataDir=/var/folders/h6/7n562mb125g9m3y_n6ygbwqw0rymmr/T/.org.chromium.Chromium.JygvcT}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.79, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: c265857526aaa02dc9f1e1f0b890bebb
+*** Element info: {Using=name, value=Username}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:461)
+	at org.openqa.selenium.By$ByName.findElement(By.java:303)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.excelhealth.page_objects.Guru99Login.setUserName(Guru99Login.java:36)
+	at com.excelhealth.page_objects.Guru99Login.loginToGuru99(Guru99Login.java:122)
+	at com.excelhealth.mytest_cases.Login_v2.test_Home_Page_Login(Login_v2.java:63)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:641)
-	at org.testng.TestRunner.run(TestRunner.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
@@ -46,47 +113,23 @@
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-Caused by: java.lang.ClassNotFoundException: com.aventstack.extentreports.reporter.ExtentHtmlReporter
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
-	... 32 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NoClassDefFoundError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startReport -->
-        <test-method status="SKIP" signature="failTest()[pri:0, instance:com.excelhealth.mytest_cases.ExtentReportClass@4590c9c3]" name="failTest" duration-ms="1" started-at="2017-09-05T23:25:24Z" finished-at="2017-09-05T23:25:24Z">
+        </test-method> <!-- test_Home_Page_Login -->
+        <test-method status="PASS" signature="close_Application()[pri:0, instance:com.excelhealth.mytest_cases.Login_v2@2344fc66]" name="close_Application" is-config="true" duration-ms="74" started-at="2017-09-07T00:52:57Z" finished-at="2017-09-07T00:52:57Z">
           <reporter-output>
+            <line>
+              <![CDATA[===User is logged OUT of Test Environment ===]]>
+            </line>
+            <line>
+              <![CDATA[=====Browser Session End=====]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- failTest -->
-        <test-method status="SKIP" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.excelhealth.mytest_cases.ExtentReportClass@4590c9c3]" name="getResult" is-config="true" duration-ms="0" started-at="2017-09-05T23:25:24Z" finished-at="2017-09-05T23:25:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method status="SKIP" signature="skipTest()[pri:0, instance:com.excelhealth.mytest_cases.ExtentReportClass@4590c9c3]" name="skipTest" duration-ms="0" started-at="2017-09-05T23:25:24Z" finished-at="2017-09-05T23:25:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- skipTest -->
-        <test-method status="SKIP" signature="passTest()[pri:0, instance:com.excelhealth.mytest_cases.ExtentReportClass@4590c9c3]" name="passTest" duration-ms="0" started-at="2017-09-05T23:25:24Z" finished-at="2017-09-05T23:25:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- passTest -->
-        <test-method status="SKIP" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.excelhealth.mytest_cases.ExtentReportClass@4590c9c3]" name="getResult" is-config="true" duration-ms="0" started-at="2017-09-05T23:25:24Z" finished-at="2017-09-05T23:25:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method status="SKIP" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.excelhealth.mytest_cases.ExtentReportClass@4590c9c3]" name="getResult" is-config="true" duration-ms="0" started-at="2017-09-05T23:25:24Z" finished-at="2017-09-05T23:25:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method status="SKIP" signature="endReport()[pri:0, instance:com.excelhealth.mytest_cases.ExtentReportClass@4590c9c3]" name="endReport" is-config="true" duration-ms="0" started-at="2017-09-05T23:25:24Z" finished-at="2017-09-05T23:25:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- com.excelhealth.mytest_cases.ExtentReportClass -->
+        </test-method> <!-- close_Application -->
+      </class> <!-- com.excelhealth.mytest_cases.Login_v2 -->
     </test> <!-- Login -->
   </suite> <!-- Suite - General1  -->
 </testng-results>

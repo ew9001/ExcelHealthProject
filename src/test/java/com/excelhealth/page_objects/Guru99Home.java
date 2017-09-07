@@ -19,8 +19,8 @@ public class Guru99Home {
 
     WebDriver driver;
 
-    @FindBy(id=("btn_home"))
-    WebElement logout;
+//    @FindBy(id=("btn_home"))
+//    WebElement logout;
 
    // loginError = (By.XPATH,'//*[@id="app-wrapper"]/div/div[3]')
 
@@ -39,7 +39,9 @@ public class Guru99Home {
     public void clickLogout(){
 
        // driver.findElement(logout).click();
-        this.logout.click();
+        driver.findElement(By.linkText("Logout")).click();
+
+      //  this.logout.click();
       //  logout.click();
 
 
