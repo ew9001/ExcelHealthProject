@@ -16,7 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.openqa.selenium.WebDriver;
 
-import com.excelhealth.page_objects.Guru99Home;
+import com.excelhealth.page_objects.MyPortalPage;
 import com.excelhealth.page_objects.Guru99Login;
 
 import java.io.IOException;

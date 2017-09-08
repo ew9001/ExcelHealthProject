@@ -1,8 +1,9 @@
 package com.excelhealth.mytest_cases;
 
 
-import com.excelhealth.page_objects.Guru99Home;
+
 import com.excelhealth.page_objects.Guru99Login;
+import com.excelhealth.page_objects.MyPortalPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -15,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 public class Login_v3 extends BaseClass {
 
    // WebDriver driver;
-    Guru99Home objLogout;
+    MyPortalPage objLogout;
     Guru99Login objLogin;
 
 /*

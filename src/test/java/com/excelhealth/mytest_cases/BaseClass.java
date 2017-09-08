@@ -1,6 +1,11 @@
 package com.excelhealth.mytest_cases;
 
+import com.excelhealth.page_objects.MyPortalPage;
 import org.apache.commons.io.FileUtils;
+import org.monte.media.Format;
+import org.monte.media.FormatKeys;
+import org.monte.media.math.Rational;
+import org.monte.screenrecorder.ScreenRecorder;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -9,8 +14,10 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.*;
 import org.testng.Assert;
-import com.excelhealth.page_objects.Guru99Home;
+import com.excelhealth.page_objects.MyPortalPage;
 import com.excelhealth.page_objects.Guru99Login;
+
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -20,18 +27,27 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.chrome.ChromeOptions;
 import java.lang.String;
 
+import static org.monte.media.FormatKeys.*;
+import static org.monte.media.FormatKeys.EncodingKey;
+import static org.monte.media.FormatKeys.FrameRateKey;
+import static org.monte.media.FormatKeys.KeyFrameIntervalKey;
+import static org.monte.media.FormatKeys.MediaTypeKey;
+import static org.monte.media.VideoFormatKeys.*;
+
+
 public class BaseClass {
 
 
     WebDriver driver;
     static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
-    Guru99Home objHome;
+
+
+    MyPortalPage objPortal;
     Guru99Login objLogin;
 
 
-
     @BeforeSuite
-    public void setupWebdriver() {
+    public void setupWebDriver() {
 
         /**
          * This test case will initialize the Webdriver Browser Instance
@@ -44,7 +60,6 @@ public class BaseClass {
         ChromeOptions options = new ChromeOptions();
         // options.addArguments("headless");
         options.addArguments("window-size=1440x1280");
-
         driver = new ChromeDriver(options);
 
         Reporter.log("=========== Browser Session Started ===========", true);
@@ -54,57 +69,33 @@ public class BaseClass {
          */
 
         driver.get("http://trial.excelhealthportal.com/");
-        //  driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        // driver.manage().window().setSize(new Dimension(1440, 1280));
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+
 
         Reporter.log("=========== Application Started ==========", true);
+
+    }
+
+
+
+
+    @BeforeClass
+
+    public void setupApplication() {
 
 
         /**
          * Log-in to application
          */
 
-    }
-
-
-    @BeforeTest
-
-    public void setupApplication() {
-
-/*        driver.findElement(By.name("Username")).clear();
-        driver.findElement(By.name("Username")).sendKeys("EarlW");
-     //   Thread.sleep(500);
-        driver.findElement(By.name("Password")).clear();
-        driver.findElement(By.name("Password")).sendKeys("upwork");
-        driver.findElement(By.name("Login")).click();*/
-
         objLogin = new Guru99Login(driver);
 
-        //login to application
         objLogin.loginToGuru99("EarlW", "upwork");
-
-
-
-
-        //login to application
-      //  LoginPage.loginToGuru99("EarlW", "upwork");
-
-        //  LoginPage.loginToGuru99("EarlW", "upwork");
-
-
-
-
-
-
-
-
-
 
 
         Reporter.log("=========== User logged into Test Environment ===========", true);
 
     }
-
 
 //    @AfterMethod
 //    public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
@@ -118,14 +109,15 @@ public class BaseClass {
 //    }
 
     @AfterClass
-    public void close_Application()
-    {
+    public void close_Application () throws Exception    {
         /**
          * Log-out of application application
          */
 
-        objHome = new Guru99Home(driver);
-        objHome.clickLogout();
+
+        objPortal = new MyPortalPage(driver);
+        objPortal.clickLogout();
+
 
         Reporter.log("===User is logged OUT of Test Environment ===", true);
 
@@ -133,22 +125,10 @@ public class BaseClass {
          * Assertion on presence of home page object
          */
 
-        //  LoginPage.assertHome();
+        objLogin.assertHomePage();
 
 
         driver.quit();
-
-
-
-//        String actual_text = driver.findElement(By.cssSelector("h5")).getText();
-//        Assert.assertEquals(actual_text, "Welcome to the Excel Health:");
-//
-//       // wait.until(ExpectedConditions.presenceOfElementLocated(By.id("sb_ifc0")));
-
-        // driver.findElement(By.linkText("Logout")).click();
-        // driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-
-
 
         Reporter.log("=====Browser Session End=====", true);
 
