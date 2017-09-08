@@ -15,7 +15,7 @@ public class MyPortalPage {
 
     By addtask = By.tagName("i");
 
-  //  By addtask = By.xpath("//table[@id='reportmenutable2']/tbody/tr/td/span/i");
+    //  By addtask = By.xpath("//table[@id='reportmenutable2']/tbody/tr/td/span/i");
 
 
     public MyPortalPage(WebDriver driver){
@@ -32,9 +32,9 @@ public class MyPortalPage {
 
     public void clickLogout(){
 
-    driver.findElement(logout).click();
+        driver.findElement(logout).click();
 
- }
+    }
     /**
      *  Click Task to Do (+)
      */
@@ -46,9 +46,9 @@ public class MyPortalPage {
     }
 
 
-  //  By password = By.name("Password");
+    //  By password = By.name("Password");
 
-  //  By titleText =By.className("barone");
+    //  By titleText =By.className("barone");
 
-  //  By login = By.name("Login");
+    //  By login = By.name("Login");
 }

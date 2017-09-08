@@ -32,7 +32,7 @@ public class Login_v2 extends BaseClass {
 
     WebDriver driver;
     MyPortalPage objPortal;
-  //  Guru99Login objLogin;
+    //  Guru99Login objLogin;
 
 /*
     @BeforeTest
@@ -46,26 +46,26 @@ public class Login_v2 extends BaseClass {
 
 
 
-       @Test(description="This is my First Test Case after initializer",  priority = 1)
-      public void add_task() throws Exception {
+    @Test(description="This is my First Test Case after initializer",  priority = 1)
+    public void add_task() throws Exception {
 
-          objPortal = new MyPortalPage(driver);
-         //  Thread.sleep(2000);
+        objPortal = new MyPortalPage(driver);
+        //  Thread.sleep(2000);
 
-          objPortal.clickTaskstodo();
+        objPortal.clickTaskstodo();
 
 
 
-          System.out.print("I clicked tasks to do");
+        System.out.print("I clicked tasks to do");
 
 
 
 //       driver.findElement(By.xpath("//table[@id='reportmenutable2']/tbody/tr/td/span/i")).click();
-       driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-       Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        Thread.sleep(2000);
 
-       driver.findElement(By.id("created")).clear();
-       driver.findElement(By.id("created")).sendKeys("2017-09-25");
+        driver.findElement(By.id("created")).clear();
+        driver.findElement(By.id("created")).sendKeys("2017-09-25");
 //
 //        WebElement wb = driver.findElement(By.name("duedate"));
 //        JavascriptExecutor jse = (JavascriptExecutor)driver;
@@ -84,7 +84,7 @@ public class Login_v2 extends BaseClass {
 
 
 
-      }
+    }
 
 
 //    @Test(description="This is my Second Test Case after initializer",  priority = 2)

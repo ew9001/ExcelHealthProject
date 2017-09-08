@@ -28,23 +28,13 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.chrome.ChromeOptions;
 import java.lang.String;
 
-import static org.monte.media.FormatKeys.*;
-import static org.monte.media.FormatKeys.EncodingKey;
-import static org.monte.media.FormatKeys.FrameRateKey;
-import static org.monte.media.FormatKeys.KeyFrameIntervalKey;
-import static org.monte.media.FormatKeys.MediaTypeKey;
-import static org.monte.media.VideoFormatKeys.*;
-
 
 public class BaseClass {
-
 
     WebDriver driver;
     static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 
 
-    MyPortalPage objPortal;
-    Guru99Login objLogin;
 
 
     @BeforeSuite
@@ -65,12 +55,10 @@ public class BaseClass {
 
         Reporter.log("=========== Browser Session Started ===========", true);
 
-        /**
-         * Fetch URL and validate application started successfully
-         */
 
+/*
         driver.get("http://trial.excelhealthportal.com/");
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);*/
 
 
         Reporter.log("=========== Application Started ==========", true);
@@ -80,25 +68,25 @@ public class BaseClass {
 
 
 
-    @BeforeClass
+   // @BeforeClass
 
-    public void setupApplication() {
+  //  public void setupApplication() {
 
 
         /**
          * Log-in to application
          */
 
-        objLogin = new Guru99Login(driver);
+      //  objLogin = new Guru99Login(driver);
 
-        objLogin.loginToGuru99("EarlW", "upwork");
+     //   objLogin.loginToGuru99("EarlW", "upwork");
 
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+     //   driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
 
-        Reporter.log("=========== User logged into Test Environment ===========", true);
+   //     Reporter.log("=========== User logged into Test Environment ===========", true);
 
-    }
+  //  }
 
 //    @AfterMethod
 //    public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
@@ -111,30 +99,10 @@ public class BaseClass {
 //        }
 //    }
 
-    @AfterClass
-    public void close_Application () throws Exception    {
-        /**
-         * Log-out of application application
-         */
-
-
-        objPortal = new MyPortalPage(driver);
-        objPortal.clickLogout();
-
-
-        Reporter.log("===User is logged OUT of Test Environment ===", true);
-
-        /**
-         * Assertion on presence of home page object
-         */
-
-        objLogin.assertHomePage();
-
+    @AfterSuite
+    public void tearDown() throws Exception {
 
         driver.quit();
-
-        Reporter.log("=====Browser Session End=====", true);
-
     }
 
 }

@@ -92,13 +92,13 @@ public class AddTask {
                 driver.findElement(By.id("created")).clear();
                 driver.findElement(By.id("created")).sendKeys("2017-09-25");
 
-              //  driver.findElement(By.xpath("//*[@id='duedate']")).sendKeys("2018-08-22");
+                driver.findElement(By.xpath("//*[@id='duedate']")).sendKeys("2018-08-22");
 
-              //  driver.findElement(By.id("created")).sendKeys(Keys.TAB);
+             //   driver.findElement(By.id("created")).sendKeys(Keys.TAB);
              //   driver.findElement(By.id("duedate")).sendKeys(Keys.ENTER);
 
 
-            //    driver.findElement(By.id("duedate")).clear();
+                driver.findElement(By.id("duedate")).clear();
 
              //   driver.findElement(By.name("duedate")).sendKeys("2017-08-30");
               //  driver.findElement(By.id("duedate")).click();
