@@ -1,37 +1,20 @@
 package com.excelhealth.mytest_cases;
 
 import org.openqa.selenium.WebDriver;
-import com.excelhealth.page_objects.MyPortalPage;
+import com.excelhealth.page_objects.MyPortalPageObject;
 import org.testng.annotations.Test;
 
 
-
-import javafx.scene.layout.Priority;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 
-import org.testng.Assert;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import org.testng.annotations.BeforeTest;
-
-import com.excelhealth.page_objects.Guru99Login;
-
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.WebElement;
 
 
 @SuppressWarnings("unused")
 public class Login_v2 extends BaseClass {
 
     WebDriver driver;
-    MyPortalPage objPortal;
+    MyPortalPageObject objPortal;
     //  Guru99Login objLogin;
 
 /*
@@ -49,10 +32,10 @@ public class Login_v2 extends BaseClass {
     @Test(description="This is my First Test Case after initializer",  priority = 1)
     public void add_task() throws Exception {
 
-        objPortal = new MyPortalPage(driver);
+      //  objPortal = new MyPortalPageObject(driver);
         //  Thread.sleep(2000);
 
-        objPortal.clickTaskstodo();
+      //  objPortal.clickTaskstodo();
 
 
 

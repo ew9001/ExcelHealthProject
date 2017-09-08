@@ -11,8 +11,14 @@ import org.testng.annotations.*;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import com.excelhealth.page_objects.SearchPage;
+import com.excelhealth.page_objects.LoginPageObject;
+import com.excelhealth.page_objects.MyPortalPageObject;
 import org.openqa.selenium.chrome.ChromeOptions;
+
+
+
+// Import package utility.*
+
 
 public class PageObjectModel {
     private WebDriver driver;
@@ -22,14 +28,12 @@ public class PageObjectModel {
    public void setUp() throws Exception {
 
 
-
-
         System.setProperty("webdriver.chrome.driver", "//Users/earl.willis/Downloads/chromedriver2");
         System.setProperty("webdriver.gecko.driver", "//Users/earl.willis/Downloads/geckodriver");
 
 
         ChromeOptions options = new ChromeOptions();
-        // options.addArguments("headless");
+       // options.addArguments("headless");
        // options.addArguments("window-size=1440x1280");
 
         driver = new ChromeDriver(options);
@@ -48,19 +52,17 @@ public class PageObjectModel {
     @Test
     public void testLogin() {
         driver.get(baseUrl);
-        SearchPage.fillOriginTextBox(driver, "EarlW");
-        SearchPage.filldestinationTextBox(driver, "upwork");
-        SearchPage.clickOnSearchButton(driver);
+        LoginPageObject.fillOriginTextBox(driver, "EarlW");
+        LoginPageObject.filldestinationTextBox(driver, "upwork");
+        LoginPageObject.clickOnSearchButton(driver);
     }
 
     @Test
     public void testLogout() {
-        driver.get(baseUrl);
-        SearchPage.fillOriginTextBox(driver, "EarlW");
-        SearchPage.filldestinationTextBox(driver, "upwork");
-        SearchPage.clickOnSearchButton(driver);
-    }
 
+        MyPortalPageObject.clickonLogoutButton(driver);
+     //   MyPortalPageObject.assertHomePageTitle(driver);
+    }
 
 
 

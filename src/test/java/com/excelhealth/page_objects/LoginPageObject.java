@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 
 
-public class SearchPage {
+public class LoginPageObject {
     public static WebElement element = null;
 
     /**
@@ -20,7 +20,8 @@ public class SearchPage {
         return element;
     }
 
-    public static void fillOriginTextBox(WebDriver driver, String origin) {
+  //  public static void fillOriginTextBox(WebDriver driver, String origin) {
+  public static void fillOriginTextBox(WebDriver driver, String origin) {
         element = originTextBox(driver);
         element.sendKeys(origin);
     }

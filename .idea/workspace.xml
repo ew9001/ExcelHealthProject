@@ -4,6 +4,7 @@
     <list default="true" readonly="true" id="883bca01-4d4f-428c-a063-51d33a5626cd" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/app_modules" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/test_data" />
@@ -21,8 +22,8 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/TestMeNow.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/plaeme1.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/Guru99Login.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/MyPortalPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/SearchPage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/LoginPageObject.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/MyPortalPageObject.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/utilities/Constant.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testng2.xml" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/Test.java" afterPath="" />
@@ -156,8 +157,8 @@
       <file leaf-file-name="BaseClass.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/BaseClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="784">
-              <caret line="97" column="28" lean-forward="true" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="28" />
+            <state relative-caret-position="668">
+              <caret line="67" column="66" lean-forward="true" selection-start-line="67" selection-start-column="66" selection-end-line="67" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -165,11 +166,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyPortalPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/MyPortalPage.java">
+      <file leaf-file-name="ExtentReportClass.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/ExtentReportClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+            <state relative-caret-position="135">
+              <caret line="37" column="31" lean-forward="true" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PageObjectModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/PageObjectModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyPortalPageObject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/MyPortalPageObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="392">
+              <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginPageObject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/LoginPageObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -180,40 +215,8 @@
       <file leaf-file-name="Login_v2.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/Login_v2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PageObjectModel.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/PageObjectModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="57" column="28" lean-forward="true" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constant.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/utilities/Constant.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/SearchPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="647">
-              <caret line="54" column="4" lean-forward="false" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
+            <state relative-caret-position="645">
+              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -224,8 +227,8 @@
       <file leaf-file-name="Guru99Login.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/Guru99Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1470">
-              <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="99" selection-end-column="73" />
+            <state relative-caret-position="495">
+              <caret line="99" column="73" lean-forward="true" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -233,12 +236,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddTask.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/AddTask.java">
+      <file leaf-file-name="Login_v3.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/Login_v3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1230">
-              <caret line="97" column="15" lean-forward="false" selection-start-line="97" selection-start-column="15" selection-end-line="97" selection-end-column="15" />
-              <folding />
+            <state relative-caret-position="270">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -249,18 +254,6 @@
             <state relative-caret-position="90">
               <caret line="6" column="52" lean-forward="false" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Login_v3.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/Login_v3.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -338,15 +331,18 @@
         <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/DashboardPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/AddTask.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/MyPortalPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/Login_v2.java" />
         <option value="$PROJECT_DIR$/testng.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/SearchPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/Guru99Login.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/SearchPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/Login_v3.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/BaseClass.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/PageObjectModel.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/utilities/Constant.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/SearchPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/app_modules/SignIn_Action.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/LoginPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/Login_v2.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/MyPortalPageObject.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/PageObjectModel.java" />
       </list>
     </option>
   </component>
@@ -428,7 +424,7 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="excelhealth" type="462c0819:PsiDirectoryNode" />
-              <item name="page_objects" type="462c0819:PsiDirectoryNode" />
+              <item name="mytest_cases" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WebdriverTest" type="b2602c69:ProjectViewProjectNode" />
@@ -437,7 +433,7 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="excelhealth" type="462c0819:PsiDirectoryNode" />
-              <item name="utilities" type="462c0819:PsiDirectoryNode" />
+              <item name="page_objects" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WebdriverTest" type="b2602c69:ProjectViewProjectNode" />
@@ -840,34 +836,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PageObjectModel - 2017.09.08 at 00h 12m 56s.xml">
-      <configuration name="PageObjectModel" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PageObjectModel - 2017.09.08 at 00h 19m 26s.xml">
-      <configuration name="PageObjectModel" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PageObjectModel - 2017.09.08 at 00h 20m 58s.xml">
-      <configuration name="PageObjectModel" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.08 at 00h 10m 22s.xml">
+    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.08 at 01h 39m 54s.xml">
       <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.08 at 00h 12m 15s.xml">
+    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.08 at 02h 09m 49s.xml">
       <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.08 at 00h 26m 16s.xml">
+    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.08 at 02h 42m 42s.xml">
       <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.08 at 00h 29m 11s.xml">
+    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.08 at 02h 43m 12s.xml">
       <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.08 at 00h 34m 30s.xml">
+    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.08 at 02h 43m 27s.xml">
       <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.08 at 00h 34m 51s.xml">
+    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.08 at 02h 43m 45s.xml">
       <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.08 at 00h 40m 54s.xml">
+    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.08 at 02h 51m 00s.xml">
+      <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.08 at 02h 52m 27s.xml">
+      <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.08 at 02h 53m 09s.xml">
+      <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.08 at 02h 58m 57s.xml">
       <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -916,11 +912,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/target/surefire-reports/failed.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/example/MetaStrip.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/example/MetaStripLocal.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/AllPagesLocalHeadless.java">
@@ -1048,6 +1039,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+          <folding>
+            <marker date="1504710209000" expanded="true" signature="11288:11306" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1068,13 +1062,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/Screencast.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/ExtentReportClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-644">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="511">
@@ -1113,69 +1100,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testng.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="52" lean-forward="false" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/Login_v3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/Guru99Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
-          <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="99" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/BaseClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="97" column="28" lean-forward="true" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/Login_v2.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/app_modules/SignIn_Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/MyPortalPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/SearchPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="54" column="4" lean-forward="false" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1187,13 +1126,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/PageObjectModel.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/Login_v2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="57" column="28" lean-forward="true" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+        <state relative-caret-position="645">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/LoginPageObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/Guru99Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="99" column="73" lean-forward="true" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testng.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="52" lean-forward="false" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/MyPortalPageObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/PageObjectModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/BaseClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="67" column="66" lean-forward="true" selection-start-line="67" selection-start-column="66" selection-end-line="67" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/ExtentReportClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="37" column="31" lean-forward="true" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>

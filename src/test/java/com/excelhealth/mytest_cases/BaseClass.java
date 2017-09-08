@@ -1,30 +1,14 @@
 package com.excelhealth.mytest_cases;
 
 
-import org.apache.commons.io.FileUtils;
-import org.monte.media.Format;
-import org.monte.media.FormatKeys;
-import org.monte.media.math.Rational;
-import org.monte.screenrecorder.ScreenRecorder;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.safari.SafariDriver;
-import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.*;
-import org.testng.Assert;
 
-import com.excelhealth.page_objects.Guru99Login;
-import com.excelhealth.page_objects.MyPortalPage;
-
-import java.awt.*;
-import java.io.File;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.Calendar;
-import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.chrome.ChromeOptions;
 import java.lang.String;
 
