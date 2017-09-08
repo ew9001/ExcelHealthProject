@@ -1,6 +1,6 @@
 package com.excelhealth.mytest_cases;
 
-import com.excelhealth.page_objects.MyPortalPage;
+
 import org.apache.commons.io.FileUtils;
 import org.monte.media.Format;
 import org.monte.media.FormatKeys;
@@ -14,8 +14,9 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.*;
 import org.testng.Assert;
-import com.excelhealth.page_objects.MyPortalPage;
+
 import com.excelhealth.page_objects.Guru99Login;
+import com.excelhealth.page_objects.MyPortalPage;
 
 import java.awt.*;
 import java.io.File;
@@ -91,6 +92,8 @@ public class BaseClass {
         objLogin = new Guru99Login(driver);
 
         objLogin.loginToGuru99("EarlW", "upwork");
+
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
 
         Reporter.log("=========== User logged into Test Environment ===========", true);

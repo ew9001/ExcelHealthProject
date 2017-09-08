@@ -84,8 +84,8 @@ public class AddTask {
                 driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
                 Thread.sleep(1000);
 
-
-                driver.findElement(By.xpath("//table[@id='reportmenutable2']/tbody/tr/td/span/i")).click();
+                driver.findElement(By.tagName("i")).click();
+              //  driver.findElement(By.xpath("//table[@id='reportmenutable2']/tbody/tr/td/span/i")).click();
                 driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
                 Thread.sleep(1000);
 
