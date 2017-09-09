@@ -15,9 +15,9 @@ public class MyPortalPageObject {
      * @param driver
      * @return
      */
-
     public static WebElement logoutButton(WebDriver driver) {
-        element = driver.findElement(By.tagName("i"));
+        element = driver.findElement(By.linkText("Logout"));
+
         return element;
     }
 
@@ -31,18 +31,63 @@ public class MyPortalPageObject {
         element.click();
     }
 
-//
-//    public static WebElement homePageHeading(WebDriver driver) {
-//        element = driver.findElement(By.cssSelector("h5"));
-//        return element;
-//    }
-//
-//    public static void assertHomePageTitle(WebDriver driver) {
-//        element = homePageHeading(driver);
-//        return element
-//        Assert.assertEquals(homePageHeading(), "Welcome to the Excel Health:");
-//
-//    }
+    /**
+     * Returns Add Task button
+     * @param driver
+     * @return
+     */
+    public static WebElement addTaskButton(WebDriver driver) {
+        element = driver.findElement(By.tagName("i"));
+
+        return element;
+    }
+
+
+    /**
+     * Click on Add Task button
+     * @param driver
+     */
+    public static void clickOnAddTaskButton (WebDriver driver) {
+        element = addTaskButton(driver);
+
+        element.click();
+    }
+
+    /**
+     * Returns Created Date
+     * @param driver
+     * @return
+     */
+    public static WebElement startdateTextBox(WebDriver driver) {
+        element = driver.findElement(By.name("created"));
+        return element;
+    }
+
+
+    public static void fillstartDateTextBox(WebDriver driver, String origin) {
+        element = startdateTextBox(driver);
+        element.clear();
+        element.sendKeys(origin);
+    }
+
+
+    /**
+     * Returns Due Date
+     * @param driver
+     * @return
+     */
+    public static WebElement duedateTextBox(WebDriver driver) {
+        element = driver.findElement(By.id("duedate"));
+        return element;
+    }
+
+    public static void fillduedateTextBox(WebDriver driver, String origin) {
+        element = startdateTextBox(driver);
+        element.sendKeys(origin);
+    }
+
+
+
 
 
 

@@ -11,6 +11,8 @@ import java.util.Calendar;
 
 import org.openqa.selenium.chrome.ChromeOptions;
 import java.lang.String;
+import java.util.concurrent.TimeUnit;
+
 
 
 public class BaseClass {
@@ -34,8 +36,17 @@ public class BaseClass {
 
         ChromeOptions options = new ChromeOptions();
         // options.addArguments("headless");
-        options.addArguments("window-size=1440x1280");
+        // options.addArguments("window-size=1440x1280");
+
         driver = new ChromeDriver(options);
+
+       // baseUrl = "http://trial.excelhealthportal.com/";
+        driver.get("http://trial.excelhealthportal.com/");
+
+
+        // Maximize the browser's window
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         Reporter.log("=========== Browser Session Started ===========", true);
 

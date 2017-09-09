@@ -20,7 +20,7 @@ public class LoginPageObject {
         return element;
     }
 
-  //  public static void fillOriginTextBox(WebDriver driver, String origin) {
+
   public static void fillOriginTextBox(WebDriver driver, String origin) {
         element = originTextBox(driver);
         element.sendKeys(origin);
@@ -50,6 +50,8 @@ public class LoginPageObject {
         element = driver.findElement(By.name("Login"));
         return element;
     }
+
+
 
 
 
