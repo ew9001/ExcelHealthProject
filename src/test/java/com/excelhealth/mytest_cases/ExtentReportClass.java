@@ -119,6 +119,19 @@ public class ExtentReportClass{
             logger.log(Status.SKIP, MarkupHelper.createLabel(result.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
         }
     }
+
+
+
+    public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
+        String myTitle = driver.getTitle();
+        if (testResult.getStatus() == ITestResult.FAILURE) {
+            File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+            //  FileUtils.copyFile(scrFile, new File("errorScreenshots\\" + testResult.getName() + "-"
+            FileUtils.copyFile(scrFile, new File("Y://Screenshots/PageLoads/" + timeStamp + "/" + testResult.getName() + "-"
+                    + Arrays.toString(testResult.getParameters()) + "failed-test" + ".jpg"));
+        }
+    }
+
     @AfterTest
     public void endReport(){
         extent.flush();
