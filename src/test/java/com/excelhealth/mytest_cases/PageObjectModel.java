@@ -66,16 +66,6 @@ public class PageObjectModel {
 
         Assert.assertTrue(MyPortalPageObject.myPortalObject(driver).isDisplayed());
 
-        // Assert.assertEquals("Wrong error message shown", "Please Enter Valid Email", driver.findElement(By.xpath("Your path of element")).getText());
-
-//        if(driver.getPageSource().contains("My Portal")){
-//            System.out.println("User logged in successfully");
-//
-//        }else{
-//            System.out.println("User failed logging im");
-//            throw new SkipException("Skipping - This is not ready for testing ");
-//        }
-//    }
     }
 
     @Test( priority = 2 )
@@ -85,20 +75,28 @@ public class PageObjectModel {
         MyPortalPageObject.waitforstartDateTextBox(driver);
         MyPortalPageObject.fillstartDateTextBox(driver, "2017-09-25");
         MyPortalPageObject.fillduetDateTextBox(driver, "2017-12-25");
-        MyPortalPageObject.filldescriptionTextBox(driver, "Meet with inspectors before deadline");
+        MyPortalPageObject.filldescriptionTextBox(driver, "Task Added");
         MyPortalPageObject.fillnotesTextBox(driver,"Note: Inspection starts in 2 weeks");
         MyPortalPageObject.clickOnSubmitButton(driver);
+
+
+
         Thread.sleep(3000);
+
+        Assert.assertTrue(driver.getPageSource().contains("Task Added"));
+
+
+       // String TaskName = "Task Added";
+//
+//        String bodyText = driver.findElement(By.xpath("//*[@id='home_tasks']/tbody/tr/td[2]/span")).getText();
+//        Assert.assertTrue("faddfaasdf", bodyText.contains("Task Added"));
+
+     //   System.out.print(bodyText);
+
+
 
         // going to have to fix this as it won't wait to go to next step w/out sleep command
 
-        if(driver.getPageSource().contains("Meet with inspe...")){
-            System.out.println("Task added successfully");
-
-        }else{
-            System.out.println("User did not ass task");
-            throw new SkipException("Something bad happened ");
-        }
     }
 
 
@@ -112,11 +110,11 @@ public class PageObjectModel {
         MyPortalPageObject.clickOnDeleteButton(driver);
         MyPortalPageObject.waitforPortalPage(driver);
 
-        Assert.assertTrue(MyPortalPageObject.myPortalObject(driver).isDisplayed());
+       // Assert.assertTrue(MyPortalPageObject.myPortalObject(driver).isDisplayed());
+        // must be when text is present
 
 
-
-        Thread.sleep(2000);
+      //  Thread.sleep(2000);
     }
 
     @Test( priority = 4 )
@@ -136,5 +134,7 @@ public class PageObjectModel {
 
         driver.quit();
     }
+
+
 
 }
