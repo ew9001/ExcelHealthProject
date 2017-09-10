@@ -11,32 +11,33 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import static org.monte.media.AudioFormatKeys.*;
 import static org.monte.media.VideoFormatKeys.*;
 
 public class plaeme1 {
-    private ScreenRecorder screenRecorder;
+    public ScreenRecorder screenRecorder;
 
-    @Test
+    @BeforeTest
     public static void recording() throws Exception {
 
           System.setProperty("webdriver.chrome.driver", "//Users/earl.willis/Downloads/chromedriver2");
-           System.setProperty("webdriver.gecko.driver", "//Users/earl.willis/Downloads/geckodriver");
+          System.setProperty("webdriver.gecko.driver", "//Users/earl.willis/Downloads/geckodriver");
 
 
         plaeme1 videoReord = new plaeme1();
         videoReord.startRecording();
 
-        WebDriver driver = new ChromeDriver();
-        driver.get("http://www.google.com");
-
-        WebElement element = driver.findElement(By.name("q"));
-        element.sendKeys("testing");
-        element.submit();
-        System.out.println("Page title is: " +driver.getTitle());
-        driver.quit();
+//        WebDriver driver = new ChromeDriver();
+//        driver.get("http://www.google.com");
+//
+//        WebElement element = driver.findElement(By.name("q"));
+//        element.sendKeys("testing");
+//        element.submit();
+//        System.out.println("Page title is: " +driver.getTitle());
+//        driver.quit();
         videoReord.stopRecording();
     }
 

@@ -18,6 +18,11 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import org.monte.media.Format;
+import org.monte.media.math.Rational;
+import org.monte.screenrecorder.ScreenRecorder;
+import static org.monte.media.AudioFormatKeys.*;
+import static org.monte.media.VideoFormatKeys.*;
 
 
 import org.openqa.selenium.TakesScreenshot;
@@ -35,7 +40,7 @@ import java.util.Arrays;
 
 
 
-public class ExtentReportClass{
+public class ExtentReportClass extends plaeme1{
     ExtentHtmlReporter htmlReporter;
     ExtentReports extent;
     ExtentTest logger;
@@ -55,8 +60,8 @@ public class ExtentReportClass{
         extent.setSystemInfo("Environment", "Automation Testing Framework");
         extent.setSystemInfo("User Name", "Excel Health");
 
-        htmlReporter.config().setDocumentTitle("Title of the Report Comes here");
-        htmlReporter.config().setReportName("Excel QA Report");
+        htmlReporter.config().setDocumentTitle("Automation Reports" + timeStamp);
+        htmlReporter.config().setReportName("Excel QA Report" + timeStamp);
         htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
         htmlReporter.config().setTheme(Theme.STANDARD);
     }
@@ -64,27 +69,30 @@ public class ExtentReportClass{
 
     //This method is to capture the screenshot and return the path of the screenshot.
 
-    public static String getScreenhot(WebDriver driver, String screenshotName) throws Exception {
-        String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-        TakesScreenshot ts = (TakesScreenshot) driver;
-        File source = ts.getScreenshotAs(OutputType.FILE);
-        //after execution, you could see a folder "FailedTestsScreenshots" under src folder
-        String destination = System.getProperty("user.dir") + "/FailedTestsScreenshots/"+screenshotName+dateName+".png";
-        File finalDestination = new File(destination);
-        FileUtils.copyFile(source, finalDestination);
-        return destination;
-    }
+//      public static String getScreenhot(WebDriver driver, String screenshotName) throws Exception {
+//        String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+//        TakesScreenshot ts = (TakesScreenshot) driver;
+//        File source = ts.getScreenshotAs(OutputType.FILE);
+//        //after execution, you could see a folder "FailedTestsScreenshots" under src folder
+//        String destination = System.getProperty("user.dir") + "/FailedTestsScreenshots/"+screenshotName+dateName+".png";
+//        File finalDestination = new File(destination);
+//        FileUtils.copyFile(source, finalDestination);
+//        return destination;
+//    }
+//
+//      public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
+//      //  String myTitle = driver.getTitle();
+//        if (testResult.getStatus() == ITestResult.FAILURE) {
+//            File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+//            //  FileUtils.copyFile(scrFile, new File("errorScreenshots\\" + testResult.getName() + "-"
+//            FileUtils.copyFile(scrFile, new File("//Users/earl.willis/Desktop/testfolder/" + timeStamp + "/" + testResult.getName() + "-"
+//                    + Arrays.toString(testResult.getParameters()) + "failed-test" + ".jpg"));
+//        }
 
-/*        public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
-      //  String myTitle = driver.getTitle();
-        if (testResult.getStatus() == ITestResult.FAILURE) {
-            File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-            //  FileUtils.copyFile(scrFile, new File("errorScreenshots\\" + testResult.getName() + "-"
-            FileUtils.copyFile(scrFile, new File("//Users/earl.willis/Desktop/testfolder/" + timeStamp + "/" + testResult.getName() + "-"
-                    + Arrays.toString(testResult.getParameters()) + "failed-test" + ".jpg"));
-        }
-    }*/
 
+
+
+/*
     @Test
     public void passTest(){
         logger = extent.createTest("passTest");
@@ -106,7 +114,7 @@ public class ExtentReportClass{
         throw new SkipException("Skipping - This is not ready for testing ");
 
     }
-
+*/
     @AfterMethod
     public void getResult(ITestResult result){
         if(result.getStatus() == ITestResult.FAILURE){

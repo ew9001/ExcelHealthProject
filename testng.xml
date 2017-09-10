@@ -6,7 +6,7 @@
         <parameter name="version" value="4"/>
         <parameter name="platform" value="ANDROID"/>
         <classes>
-            <class name="com.excelhealth.mytest_cases.plaeme1"/>
+            <class name="com.excelhealth.mytest_cases.PageObjectModel"/>
         </classes>
     </test>
 

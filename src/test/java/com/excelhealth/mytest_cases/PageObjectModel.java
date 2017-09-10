@@ -86,7 +86,7 @@ public class PageObjectModel extends ExtentReportClass {
         MyPortalPageObject.clickOnSubmitButton(driver);
 
         Thread.sleep(3000);
-        // NEED TO DO ======:  Need to add an explicit wait ===== NEED TO DO
+        // NEED TO DO ======:  Need to add an explicit wait ===== NEED TO DO - wait for text present
 
         Assert.assertTrue(driver.getPageSource().contains("Task Added"));
         logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed is passTest", ExtentColor.GREEN));
@@ -97,7 +97,7 @@ public class PageObjectModel extends ExtentReportClass {
 
     @Test( priority = 3 )
     public void testDelete_task() throws Exception{
-
+        logger = extent.createTest("testDeleteTask");
         MyPortalPageObject.clickOnDescription(driver);
         MyPortalPageObject.waitforEditTaskandclick(driver);
         MyPortalPageObject.waitforstartDateTextBox(driver);
@@ -105,10 +105,15 @@ public class PageObjectModel extends ExtentReportClass {
         MyPortalPageObject.waitforPortalPage(driver);
 
     //    Assert.assertFalse(driver.getPageSource().contains("No data available in table"));
-        Assert.assertTrue(driver.getPageSource().contains("Task Added"));
+     //   Assert.assertTrue(driver.getPageSource().contains("Task Added"));
        // Assert.assertTrue(MyPortalPageObject.myPortalObject(driver).isDisplayed());
         // must be when text is present
+       // try {
+        Thread.sleep(1000);
 
+
+        Assert.assertFalse(driver.getPageSource().contains("Task Added"));
+        logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed is passTest", ExtentColor.GREEN));
 
 
 
