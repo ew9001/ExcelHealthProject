@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 
 @SuppressWarnings("unused")
-public class Login_v2 extends BaseClass {
+public class Login_v2  {
 
     WebDriver driver;
     MyPortalPageObject objPortal;

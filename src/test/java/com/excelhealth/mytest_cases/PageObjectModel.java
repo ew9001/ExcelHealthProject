@@ -35,7 +35,8 @@ import org.apache.bcel.generic.Select;
 
 
 public class PageObjectModel extends ExtentReportClass {
-    private WebDriver driver;
+/*
+      private WebDriver driver;
     private String baseUrl;
 
     @BeforeTest
@@ -46,7 +47,7 @@ public class PageObjectModel extends ExtentReportClass {
 
 
         ChromeOptions options = new ChromeOptions();
-       //  options.addArguments("headless");
+         options.addArguments("headless");
          options.addArguments("window-size=1440x1280");
 
         driver = new ChromeDriver(options);
@@ -55,13 +56,12 @@ public class PageObjectModel extends ExtentReportClass {
         driver.get(baseUrl);
 
 
-        // Maximize the browser's window
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-
-
+*/
 
     @Test( priority = 1 )
     public void testLogin() {
@@ -109,7 +109,7 @@ public class PageObjectModel extends ExtentReportClass {
        // Assert.assertTrue(MyPortalPageObject.myPortalObject(driver).isDisplayed());
         // must be when text is present
        // try {
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
 
         Assert.assertFalse(driver.getPageSource().contains("Task Added"));

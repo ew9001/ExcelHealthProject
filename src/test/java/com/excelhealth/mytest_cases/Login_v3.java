@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 
 @SuppressWarnings("unused")
-public class Login_v3 extends BaseClass {
+public class Login_v3 {
 
    // WebDriver driver;
     MyPortalPageObject objLogout;
@@ -36,7 +36,7 @@ public class Login_v3 extends BaseClass {
 
         //Create Login Page object
 
-        objLogin = new Guru99Login(driver);
+     //   objLogin = new Guru99Login(driver);
 
 
         //login to application

@@ -2,13 +2,18 @@ package com.excelhealth.mytest_cases;
 
 //package extentReports;
 
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.SkipException;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
+import org.openqa.selenium.firefox.FirefoxBinary;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -18,6 +23,7 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.excelhealth.mytest_cases.GetScreenShot;
 import org.monte.media.Format;
 import org.monte.media.math.Rational;
 import org.monte.screenrecorder.ScreenRecorder;
@@ -30,23 +36,78 @@ import org.openqa.selenium.WebDriver;
 import org.apache.commons.io.FileUtils;
 import java.io.FileInputStream;
 import java.text.SimpleDateFormat;
+import com.relevantcodes.extentreports.LogStatus;
 import java.util.Date;
 import java.io.File;
 import org.openqa.selenium.OutputType;
 import java.util.Calendar;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
 
 
-
-
-public class ExtentReportClass extends plaeme1{
+public class ExtentReportClass {
     ExtentHtmlReporter htmlReporter;
     ExtentReports extent;
     ExtentTest logger;
     WebDriver driver;
 
     static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+
+
+    @BeforeSuite
+
+    public void setupWebDriver() {
+
+        /**
+         * This test case will initialize the Webdriver Browser Instance
+         */
+
+
+        System.setProperty("webdriver.chrome.driver", "//Users/earl.willis/Downloads/chromedriver2");
+        System.setProperty("webdriver.gecko.driver", "//Users/earl.willis/Downloads/geckodriver");
+        System.setProperty("webdriver.safari.driver","//Users/earl.willis/applications/Safari.app");
+
+
+        ChromeOptions options = new ChromeOptions();
+      //  options.addArguments("headless");
+        options.addArguments("window-size=1440x1280");
+
+          driver = new ChromeDriver(options);
+   //     driver = new SafariDriver();
+//
+//        FirefoxBinary firefoxBinary = new FirefoxBinary();
+//        firefoxBinary.addCommandLineOptions("--headless");
+
+
+
+
+
+
+
+
+     //   driver = new FirefoxDriver();
+
+       //  baseUrl = "http://trial.excelhealthportal.com/";
+        driver.get("http://trial.excelhealthportal.com/");
+
+
+        // Maximize the browser's window
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        Reporter.log("=========== Browser Session Started ===========", true);
+
+
+/*
+        driver.get("http://trial.excelhealthportal.com/");
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);*/
+
+
+        Reporter.log("=========== Application Started ==========", true);
+
+    }
+
 
     @BeforeTest
     public void startReport(){
@@ -65,6 +126,7 @@ public class ExtentReportClass extends plaeme1{
         htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
         htmlReporter.config().setTheme(Theme.STANDARD);
     }
+
 
 
     //This method is to capture the screenshot and return the path of the screenshot.
@@ -115,8 +177,8 @@ public class ExtentReportClass extends plaeme1{
 
     }
 */
-    @AfterMethod
-    public void getResult(ITestResult result){
+ /*   @AfterMethod
+  public void getResult(ITestResult result){
         if(result.getStatus() == ITestResult.FAILURE){
             //logger.log(Status.FAIL, "Test Case Failed is "+result.getName());
             //MarkupHelper is used to display the output in different colors
@@ -139,9 +201,23 @@ public class ExtentReportClass extends plaeme1{
                     + Arrays.toString(testResult.getParameters()) + "failed-test" + ".jpg"));
         }
     }
+*/
+
+
 
     @AfterTest
     public void endReport(){
         extent.flush();
     }
+
+
+    @AfterSuite
+    public void tearDown() throws Exception {
+
+        driver.quit();
+    }
+
 }
+
+
+

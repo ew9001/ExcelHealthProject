@@ -6,9 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-
-import java.util.concurrent.TimeUnit;
 
 
 public class MyPortalPageObject {
@@ -59,13 +56,6 @@ public class MyPortalPageObject {
         element.click();
     }
 
-
-
-    ////////////////////////////////////////////////////
-
-
-
-
     /**
      * Returns MyPortal Object
      * @param driver
@@ -82,11 +72,7 @@ public class MyPortalPageObject {
         WebDriverWait myWaitVar = new WebDriverWait(driver,20);
         myWaitVar.until(ExpectedConditions.presenceOfElementLocated(By.id("home_myfac_filter")));
 
-       // WebElement el = myWaitVar.until(ExpectedConditions.elementToBeClickable(myPortalObject(driver)));
-       // el.click();
-        //   el.sendKeys(origin);
 
-        //  element.sendKeys(origin);
     }
 
 
@@ -182,8 +168,6 @@ public class MyPortalPageObject {
         element.sendKeys(origin);
     }
 
-
-
     /**
      * Click onSubmit button
      * @param driver
@@ -206,10 +190,6 @@ public class MyPortalPageObject {
 
 
 
-
-
-
-
     /**
      * Click on Desription in list
      * @param driver
@@ -221,8 +201,6 @@ public class MyPortalPageObject {
     }
 
 
-
-
    public static void waitforEditTaskandclick (WebDriver driver) {
 
        WebDriverWait myWaitVar = new WebDriverWait(driver,20);
@@ -230,21 +208,6 @@ public class MyPortalPageObject {
        el.click();
 
     }
-//
-//
-//    /**
-//     * Click on Edit Task Pop UP
-//     * @param driver
-//     */
-//    public static void clickOnEditTask (WebDriver driver) {
-//
-//
-//        element =  driver.findElement(By.cssSelector("div.ui-tooltip-content > div > div.tooltipedit > a.edittask"));
-//        element.click();
-//    }
-
-
-
 
 
     /**
@@ -255,10 +218,6 @@ public class MyPortalPageObject {
         element =   driver.findElement(By.id("delete"));
         element.click();
     }
-
-
-
-
 
 
 

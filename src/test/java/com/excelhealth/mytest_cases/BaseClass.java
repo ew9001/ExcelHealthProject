@@ -40,7 +40,7 @@ public class BaseClass {
 
         driver = new ChromeDriver(options);
 
-       // baseUrl = "http://trial.excelhealthportal.com/";
+        // baseUrl = "http://trial.excelhealthportal.com/";
         driver.get("http://trial.excelhealthportal.com/");
 
 
@@ -63,25 +63,25 @@ public class BaseClass {
 
 
 
-   // @BeforeClass
+    // @BeforeClass
 
-  //  public void setupApplication() {
-
-
-        /**
-         * Log-in to application
-         */
-
-      //  objLogin = new Guru99Login(driver);
-
-     //   objLogin.loginToGuru99("EarlW", "upwork");
-
-     //   driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+    //  public void setupApplication() {
 
 
-   //     Reporter.log("=========== User logged into Test Environment ===========", true);
+    /**
+     * Log-in to application
+     */
 
-  //  }
+    //  objLogin = new Guru99Login(driver);
+
+    //   objLogin.loginToGuru99("EarlW", "upwork");
+
+    //   driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+
+
+    //     Reporter.log("=========== User logged into Test Environment ===========", true);
+
+    //  }
 
 //    @AfterMethod
 //    public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
