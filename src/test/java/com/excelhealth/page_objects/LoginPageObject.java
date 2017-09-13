@@ -4,7 +4,8 @@ package com.excelhealth.page_objects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class LoginPageObject {
@@ -12,6 +13,7 @@ public class LoginPageObject {
 
     /**
      * Returns the flight origin text box element
+     *
      * @param driver
      * @return
      */
@@ -21,13 +23,14 @@ public class LoginPageObject {
     }
 
 
-  public static void fillOriginTextBox(WebDriver driver, String origin) {
+    public static void fillOriginTextBox(WebDriver driver, String origin) {
         element = originTextBox(driver);
         element.sendKeys(origin);
     }
 
     /**
      * Returns the flight destination text box element
+     *
      * @param driver
      * @return
      */
@@ -43,6 +46,7 @@ public class LoginPageObject {
 
     /**
      * Returns the search button box element
+     *
      * @param driver
      * @return
      */
@@ -50,6 +54,11 @@ public class LoginPageObject {
         element = driver.findElement(By.name("Login"));
         return element;
     }
+
+
+
+
+
 
 
 

@@ -12,35 +12,31 @@
 
 
 
-<!--
-
-  <test name="Add Task">
+    <!--
+      <test name="Add Task">
+        <parameter name="browser" value="Android"/>
+        <parameter name="version" value="4"/>
+        <parameter name="platform" value="ANDROID"/>
+        <classes>
+          <class name="AddTask"/>
+        </classes>
+      </test>
+     <test name="Delete Task">
     <parameter name="browser" value="Android"/>
-    <parameter name="version" value="4"/>
-    <parameter name="platform" value="ANDROID"/>
-    <classes>
-      <class name="AddTask"/>
-    </classes>
-
-  </test>
-
- <test name="Delete Task">
-<parameter name="browser" value="Android"/>
-  <parameter name="version" value="4"/>
-  <parameter name="platform" value="ANDROID"/>
-    <classes>
-      <class name="DeleteTask"/>
-    </classes>
- </test>
-
-  <test name="Add Favorite ">
-    <parameter name="browser" value="Android"/>
-    <parameter name="version" value="4"/>
-    <parameter name="platform" value="ANDROID"/>
-    <classes>
-      <class name="AddFavorite"/>
-    </classes>
-/////
-  </test>
--->
+      <parameter name="version" value="4"/>
+      <parameter name="platform" value="ANDROID"/>
+        <classes>
+          <class name="DeleteTask"/>
+        </classes>
+     </test>
+      <test name="Add Favorite ">
+        <parameter name="browser" value="Android"/>
+        <parameter name="version" value="4"/>
+        <parameter name="platform" value="ANDROID"/>
+        <classes>
+          <class name="AddFavorite"/>
+        </classes>
+    /////
+      </test>
+    -->
 </suite> <!-- Suite -->

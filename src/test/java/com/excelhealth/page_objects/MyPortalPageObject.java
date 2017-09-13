@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.Select;
 
 
 public class MyPortalPageObject {
@@ -70,10 +71,16 @@ public class MyPortalPageObject {
     public static void waitforPortalPage(WebDriver driver) {
 
         WebDriverWait myWaitVar = new WebDriverWait(driver,20);
-        myWaitVar.until(ExpectedConditions.presenceOfElementLocated(By.id("home_myfac_filter")));
-
+        myWaitVar.until(ExpectedConditions.elementToBeClickable(By.id("home_myfac_filter")));
 
     }
+
+
+
+
+
+  //  new Select(driver.findElement(By.id("priority"))).selectByVisibleText("Low");
+
 
 
 
@@ -115,6 +122,7 @@ public class MyPortalPageObject {
     }
 
 
+
     /**
      * Returns Due Date
      * @param driver
@@ -132,6 +140,27 @@ public class MyPortalPageObject {
         element.clear();
         element.sendKeys(origin);
     }
+
+
+
+    public static void setStatus(WebDriver driver) {
+
+        new Select(driver.findElement(By.id("status"))).selectByVisibleText("Awaiting Response");
+        //   myWaitVar.until(ExpectedConditions.elementToBeClickable(By.id("home_myfac_filter")));
+
+    }
+
+    public static void setPriority(WebDriver driver) {
+
+        new Select(driver.findElement(By.id("priority"))).selectByVisibleText("Low");
+
+
+    }
+
+
+
+
+
 
 
     /**

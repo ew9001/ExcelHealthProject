@@ -70,11 +70,11 @@ public class ExtentReportClass {
 
 
         ChromeOptions options = new ChromeOptions();
-      //  options.addArguments("headless");
+        //  options.addArguments("headless");
         options.addArguments("window-size=1440x1280");
 
-          driver = new ChromeDriver(options);
-   //     driver = new SafariDriver();
+        driver = new ChromeDriver(options);
+        //     driver = new SafariDriver();
 //
 //        FirefoxBinary firefoxBinary = new FirefoxBinary();
 //        firefoxBinary.addCommandLineOptions("--headless");
@@ -86,9 +86,9 @@ public class ExtentReportClass {
 
 
 
-     //   driver = new FirefoxDriver();
+        //   driver = new FirefoxDriver();
 
-       //  baseUrl = "http://trial.excelhealthportal.com/";
+        //  baseUrl = "http://trial.excelhealthportal.com/";
         driver.get("http://trial.excelhealthportal.com/");
 
 
@@ -112,8 +112,8 @@ public class ExtentReportClass {
     @BeforeTest
     public void startReport(){
 
-         htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/test-output/ExtentReport/ExtentReport.html");
-      //  htmlReporter = new ExtentHtmlReporter("//Users/earl.willis/Desktop/testfolder/STMExtentReport.html");
+        htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/test-output/ExtentReport/ExtentReport.html");
+        //  htmlReporter = new ExtentHtmlReporter("//Users/earl.willis/Desktop/testfolder/STMExtentReport.html");
 
         extent = new ExtentReports ();
         extent.attachReporter(htmlReporter);
@@ -161,7 +161,6 @@ public class ExtentReportClass {
         Assert.assertTrue(true);
         logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed is passTest", ExtentColor.GREEN));
     }
-
     @Test
     public void failTest(){
         logger = extent.createTest("failTest");
@@ -169,12 +168,10 @@ public class ExtentReportClass {
         logger.log(Status.PASS, "Test Case (failTest) Status is passed");
         logger.log(Status.PASS, MarkupHelper.createLabel("Test Case (failTest) Status is passed", ExtentColor.GREEN));
     }
-
     @Test
     public void skipTest(){
         logger = extent.createTest("skipTest");
         throw new SkipException("Skipping - This is not ready for testing ");
-
     }
 */
  /*   @AfterMethod
@@ -189,9 +186,6 @@ public class ExtentReportClass {
             logger.log(Status.SKIP, MarkupHelper.createLabel(result.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
         }
     }
-
-
-
     public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
         String myTitle = driver.getTitle();
         if (testResult.getStatus() == ITestResult.FAILURE) {
@@ -202,6 +196,43 @@ public class ExtentReportClass {
         }
     }
 */
+
+ @AfterMethod
+ public void tearDown(ITestResult result)
+ {
+
+// Here will compare if test is failing then only it will enter into if condition
+     if(ITestResult.FAILURE==result.getStatus())
+     {
+         try
+         {
+// Create refernce of TakesScreenshot
+             TakesScreenshot ts=(TakesScreenshot)driver;
+
+// Call method to capture screenshot
+             File source=ts.getScreenshotAs(OutputType.FILE);
+
+// Copy files to specific location here it will save all screenshot in our project home directory and
+// result.getName() will return name of test case so that screenshot name will be same
+             FileUtils.copyFile(source, new File("//Users/earl.willis/Desktop/testfolder/"+result.getName()+".png"));
+
+             System.out.println("Screenshot taken");
+         }
+         catch (Exception e)
+         {
+
+             System.out.println("Exception while taking screenshot "+e.getMessage());
+         }
+
+
+
+     }
+// close application
+     driver.quit();
+ }
+
+
+
 
 
 
@@ -218,6 +249,4 @@ public class ExtentReportClass {
     }
 
 }
-
-
 
