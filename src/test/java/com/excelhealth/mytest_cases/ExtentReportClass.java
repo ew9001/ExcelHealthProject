@@ -32,6 +32,7 @@ import static org.monte.media.VideoFormatKeys.*;
 
 
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.apache.commons.io.FileUtils;
 import java.io.FileInputStream;
@@ -46,7 +47,7 @@ import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 
-public class ExtentReportClass {
+public class ExtentReportClass extends plaeme1{
     ExtentHtmlReporter htmlReporter;
     ExtentReports extent;
     ExtentTest logger;
@@ -65,28 +66,36 @@ public class ExtentReportClass {
 
 
         System.setProperty("webdriver.chrome.driver", "//Users/earl.willis/Downloads/chromedriver2");
-        System.setProperty("webdriver.gecko.driver", "//Users/earl.willis/Downloads/geckodriver");
+       // System.setProperty("webdriver.gecko.driver", "//Users/earl.willis/Downloads/geckodriver");
         System.setProperty("webdriver.safari.driver","//Users/earl.willis/applications/Safari.app");
 
 
         ChromeOptions options = new ChromeOptions();
-        //  options.addArguments("headless");
-        options.addArguments("window-size=1440x1280");
+       //  options.addArguments("headless");
+       options.addArguments("window-size=1440x1280");
 
-        driver = new ChromeDriver(options);
+      driver = new ChromeDriver(options);
         //     driver = new SafariDriver();
 //
 //        FirefoxBinary firefoxBinary = new FirefoxBinary();
 //        firefoxBinary.addCommandLineOptions("--headless");
 
 
+     //   DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+     //   FirefoxOptions options = new FirefoxOptions();
+
+      //  options.addPreference("log", "{level: trace}");
+      //  options.setBinary("//Users/earl.willis/Applications/Firefox.app");
+
+      //  capabilities.setCapability("marionette", true);
+      //  capabilities.setCapability("moz:firefoxOptions", options);
+
+        System.setProperty("webdriver.gecko.driver", "geckodriver");
+
+       // driver = new FirefoxDriver(capabilities);
 
 
-
-
-
-
-        //   driver = new FirefoxDriver();
+      //    driver = new FirefoxDriver();
 
         //  baseUrl = "http://trial.excelhealthportal.com/";
         driver.get("http://trial.excelhealthportal.com/");
@@ -110,7 +119,7 @@ public class ExtentReportClass {
 
 
     @BeforeTest
-    public void startReport(){
+    public void startReport() throws  Exception{
 
         htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/test-output/ExtentReport/ExtentReport.html");
         //  htmlReporter = new ExtentHtmlReporter("//Users/earl.willis/Desktop/testfolder/STMExtentReport.html");
@@ -125,31 +134,10 @@ public class ExtentReportClass {
         htmlReporter.config().setReportName("Excel QA Report" + timeStamp);
         htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
         htmlReporter.config().setTheme(Theme.STANDARD);
+
+        screenRecorder.start();
     }
 
-
-
-    //This method is to capture the screenshot and return the path of the screenshot.
-
-//      public static String getScreenhot(WebDriver driver, String screenshotName) throws Exception {
-//        String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-//        TakesScreenshot ts = (TakesScreenshot) driver;
-//        File source = ts.getScreenshotAs(OutputType.FILE);
-//        //after execution, you could see a folder "FailedTestsScreenshots" under src folder
-//        String destination = System.getProperty("user.dir") + "/FailedTestsScreenshots/"+screenshotName+dateName+".png";
-//        File finalDestination = new File(destination);
-//        FileUtils.copyFile(source, finalDestination);
-//        return destination;
-//    }
-//
-//      public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
-//      //  String myTitle = driver.getTitle();
-//        if (testResult.getStatus() == ITestResult.FAILURE) {
-//            File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-//            //  FileUtils.copyFile(scrFile, new File("errorScreenshots\\" + testResult.getName() + "-"
-//            FileUtils.copyFile(scrFile, new File("//Users/earl.willis/Desktop/testfolder/" + timeStamp + "/" + testResult.getName() + "-"
-//                    + Arrays.toString(testResult.getParameters()) + "failed-test" + ".jpg"));
-//        }
 
 
 
@@ -174,72 +162,62 @@ public class ExtentReportClass {
         throw new SkipException("Skipping - This is not ready for testing ");
     }
 */
- /*   @AfterMethod
-  public void getResult(ITestResult result){
-        if(result.getStatus() == ITestResult.FAILURE){
-            //logger.log(Status.FAIL, "Test Case Failed is "+result.getName());
-            //MarkupHelper is used to display the output in different colors
-            logger.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " - Test Case Failed", ExtentColor.RED));
-            logger.log(Status.FAIL, MarkupHelper.createLabel(result.getThrowable() + " - Test Case Failed", ExtentColor.RED));
-        }else if(result.getStatus() == ITestResult.SKIP){
-            //logger.log(Status.SKIP, "Test Case Skipped is "+result.getName());
-            logger.log(Status.SKIP, MarkupHelper.createLabel(result.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
-        }
-    }
-    public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
-        String myTitle = driver.getTitle();
-        if (testResult.getStatus() == ITestResult.FAILURE) {
-            File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-            //  FileUtils.copyFile(scrFile, new File("errorScreenshots\\" + testResult.getName() + "-"
-            FileUtils.copyFile(scrFile, new File("Y://Screenshots/PageLoads/" + timeStamp + "/" + testResult.getName() + "-"
-                    + Arrays.toString(testResult.getParameters()) + "failed-test" + ".jpg"));
-        }
-    }
-*/
 
- @AfterMethod
- public void tearDown(ITestResult result)
- {
+
+
+
+// @Test
+// public void screencast() throws Exception{
+//
+//     screenRecorder.start();
+// }
+
+
+
+    @AfterMethod
+    public void tearDown(ITestResult result)
+    {
 
 // Here will compare if test is failing then only it will enter into if condition
-     if(ITestResult.FAILURE==result.getStatus())
-     {
-         try
-         {
+        if(ITestResult.FAILURE==result.getStatus())
+        {
+            try
+            {
 // Create refernce of TakesScreenshot
-             TakesScreenshot ts=(TakesScreenshot)driver;
+                TakesScreenshot ts=(TakesScreenshot)driver;
 
 // Call method to capture screenshot
-             File source=ts.getScreenshotAs(OutputType.FILE);
+                File source=ts.getScreenshotAs(OutputType.FILE);
 
 // Copy files to specific location here it will save all screenshot in our project home directory and
 // result.getName() will return name of test case so that screenshot name will be same
-             FileUtils.copyFile(source, new File("//Users/earl.willis/Desktop/testfolder/"+result.getName()+".png"));
+                FileUtils.copyFile(source, new File("//Users/earl.willis/Desktop/testfolder/"+result.getName()+".png"));
 
-             System.out.println("Screenshot taken");
-         }
-         catch (Exception e)
-         {
+                System.out.println("Screenshot taken");
+            }
+            catch (Exception e)
+            {
 
-             System.out.println("Exception while taking screenshot "+e.getMessage());
-         }
-
-
-
-     }
-// close application
-     driver.quit();
- }
+                System.out.println("Exception while taking screenshot "+e.getMessage());
+            }
 
 
+
+        }
+
+
+    }
 
 
 
 
     @AfterTest
-    public void endReport(){
-        extent.flush();
+    public void endReport() throws Exception{
+
+     extent.flush();
+     screenRecorder.stop();
     }
+
 
 
     @AfterSuite
@@ -249,4 +227,3 @@ public class ExtentReportClass {
     }
 
 }
-

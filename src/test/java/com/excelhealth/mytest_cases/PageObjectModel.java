@@ -28,7 +28,7 @@ public class PageObjectModel extends ExtentReportClass {
     @Test( priority = 1 )
     public void testLogin() {
         logger = extent.createTest("testLogin");
-        LoginPageObject.fillOriginTextBox(driver, "xEarlW");
+        LoginPageObject.fillOriginTextBox(driver, "EarlW");
         LoginPageObject.filldestinationTextBox(driver, "upwork");
         LoginPageObject.clickOnSearchButton(driver);
 
@@ -38,7 +38,7 @@ public class PageObjectModel extends ExtentReportClass {
     }
 
     @Test( priority = 2 )
-    public void testAdd_task() throws Exception{
+    public void testAdd_task() {
         logger = extent.createTest("testAddTask");
         MyPortalPageObject.clickOnAddTaskButton(driver);
         MyPortalPageObject.waitforstartDateTextBox(driver);
@@ -57,7 +57,7 @@ public class PageObjectModel extends ExtentReportClass {
 
 
     @Test( priority = 3 )
-    public void testDelete_task() throws Exception{
+    public void testDelete_task() {
         logger = extent.createTest("testDeleteTask");
         MyPortalPageObject.clickOnDescription(driver);
         MyPortalPageObject.waitforEditTaskandclick(driver);

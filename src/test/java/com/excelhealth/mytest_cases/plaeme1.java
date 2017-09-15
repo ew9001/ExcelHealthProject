@@ -18,7 +18,7 @@ import static org.monte.media.AudioFormatKeys.*;
 import static org.monte.media.VideoFormatKeys.*;
 
 public class plaeme1 {
-    public ScreenRecorder screenRecorder;
+    public static ScreenRecorder screenRecorder;
 
     @BeforeTest
     public static void recording() throws Exception {
