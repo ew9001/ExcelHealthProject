@@ -2,6 +2,12 @@ package com.excelhealth.mytest_cases;
 
 //package extentReports;
 
+import com.excelhealth.page_objects.LoginPageObject;
+import jxl.Sheet;
+import jxl.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -37,7 +43,7 @@ import org.openqa.selenium.WebDriver;
 import org.apache.commons.io.FileUtils;
 import java.io.FileInputStream;
 import java.text.SimpleDateFormat;
-import com.relevantcodes.extentreports.LogStatus;
+// import com.relevantcodes.extentreports.LogStatus;
 import java.util.Date;
 import java.io.File;
 import org.openqa.selenium.OutputType;
@@ -45,6 +51,7 @@ import java.util.Calendar;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
+import com.excelhealth.mytest_cases.plaeme1;
 
 
 public class ExtentReportClass extends plaeme1{
@@ -52,53 +59,47 @@ public class ExtentReportClass extends plaeme1{
     ExtentReports extent;
     ExtentTest logger;
     WebDriver driver;
+    Sheet s;
+
+
 
     static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 
 
     @BeforeSuite
 
-    public void setupWebDriver() {
+
+    public void setupWebDriver() throws Exception {
+
+        /**
+         * Grabs credentials from Excel Spreadsheet
+         */
+
+        FileInputStream fi = new FileInputStream("all.xls");
+        Workbook w = Workbook.getWorkbook(fi);
+        s = w.getSheet(0);
+
+        String username = s.getCell(0, 0).getContents();
+        String password = s.getCell(0, 1).getContents();
+        String baseUrl = s.getCell(0, 2).getContents();
+        System.out.println("Cell Data: " + baseUrl + username + password);
+
 
         /**
          * This test case will initialize the Webdriver Browser Instance
          */
 
-
-        System.setProperty("webdriver.chrome.driver", "//Users/earl.willis/Downloads/chromedriver2");
-       // System.setProperty("webdriver.gecko.driver", "//Users/earl.willis/Downloads/geckodriver");
-        System.setProperty("webdriver.safari.driver","//Users/earl.willis/applications/Safari.app");
+        System.setProperty("webdriver.gecko.driver", "geckodriver");
+        System.setProperty("webdriver.chrome.driver", "chromedriver2");
 
 
         ChromeOptions options = new ChromeOptions();
        //  options.addArguments("headless");
-       options.addArguments("window-size=1440x1280");
+        options.addArguments("window-size=1440x1280");
 
-      driver = new ChromeDriver(options);
-        //     driver = new SafariDriver();
-//
-//        FirefoxBinary firefoxBinary = new FirefoxBinary();
-//        firefoxBinary.addCommandLineOptions("--headless");
+        driver = new ChromeDriver(options);
+        driver.get(baseUrl);
 
-
-     //   DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-     //   FirefoxOptions options = new FirefoxOptions();
-
-      //  options.addPreference("log", "{level: trace}");
-      //  options.setBinary("//Users/earl.willis/Applications/Firefox.app");
-
-      //  capabilities.setCapability("marionette", true);
-      //  capabilities.setCapability("moz:firefoxOptions", options);
-
-        System.setProperty("webdriver.gecko.driver", "geckodriver");
-
-       // driver = new FirefoxDriver(capabilities);
-
-
-      //    driver = new FirefoxDriver();
-
-        //  baseUrl = "http://trial.excelhealthportal.com/";
-        driver.get("http://trial.excelhealthportal.com/");
 
 
         // Maximize the browser's window
@@ -107,19 +108,14 @@ public class ExtentReportClass extends plaeme1{
 
         Reporter.log("=========== Browser Session Started ===========", true);
 
-
-/*
-        driver.get("http://trial.excelhealthportal.com/");
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);*/
-
-
         Reporter.log("=========== Application Started ==========", true);
 
-    }
+
+        }
 
 
     @BeforeTest
-    public void startReport() throws  Exception{
+    public void startReport() throws Exception{
 
         htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/test-output/ExtentReport/ExtentReport.html");
         //  htmlReporter = new ExtentHtmlReporter("//Users/earl.willis/Desktop/testfolder/STMExtentReport.html");
@@ -135,12 +131,24 @@ public class ExtentReportClass extends plaeme1{
         htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
         htmlReporter.config().setTheme(Theme.STANDARD);
 
+        /**
+         * References plaeme1 class to start recording before each test starts
+         */
+
+
         screenRecorder.start();
+
+
+
     }
 
 
 
 
+
+    /**
+     * These methods @Test, will run some random pass/fail/skip scenarios
+     */
 
 /*
     @Test
@@ -164,15 +172,10 @@ public class ExtentReportClass extends plaeme1{
 */
 
 
-
-
-// @Test
-// public void screencast() throws Exception{
-//
-//     screenRecorder.start();
-// }
-
-
+ 
+    /**
+     * This method will take a screenshot after a failed test case
+     */
 
     @AfterMethod
     public void tearDown(ITestResult result)
@@ -191,7 +194,7 @@ public class ExtentReportClass extends plaeme1{
 
 // Copy files to specific location here it will save all screenshot in our project home directory and
 // result.getName() will return name of test case so that screenshot name will be same
-                FileUtils.copyFile(source, new File("//Users/earl.willis/Desktop/testfolder/"+result.getName()+".png"));
+                FileUtils.copyFile(source, new File("fail/"+result.getName()+".png"));
 
                 System.out.println("Screenshot taken");
             }
@@ -201,24 +204,22 @@ public class ExtentReportClass extends plaeme1{
                 System.out.println("Exception while taking screenshot "+e.getMessage());
             }
 
-
-
         }
 
 
     }
 
 
-
-
     @AfterTest
     public void endReport() throws Exception{
 
      extent.flush();
-     screenRecorder.stop();
+
+        /**
+         * This method will stop the recorder after each test
+         */
+    screenRecorder.stop();
     }
-
-
 
     @AfterSuite
     public void tearDown() throws Exception {

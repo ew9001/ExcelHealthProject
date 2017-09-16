@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 
 @SuppressWarnings("unused")
-public class TestMeNow {
+public class TestMeNow extends ExtentReportClass{
 
 
     @Test
@@ -15,6 +15,7 @@ public class TestMeNow {
         Reporter.log("=========== This is a test to see if my classes are running ===========", true);
         Reporter.log("====== SUCCESS =====", true);
         Reporter.log("=========== Test is complete ===========", true);
+
 
     }
 

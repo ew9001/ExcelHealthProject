@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -20,11 +21,11 @@ import static org.monte.media.VideoFormatKeys.*;
 public class plaeme1 {
     public static ScreenRecorder screenRecorder;
 
-    @BeforeTest
+     @BeforeTest
     public static void recording() throws Exception {
 
-          System.setProperty("webdriver.chrome.driver", "//Users/earl.willis/Downloads/chromedriver2");
-          System.setProperty("webdriver.gecko.driver", "//Users/earl.willis/Downloads/geckodriver");
+        System.setProperty("webdriver.chrome.driver", "chromedriver2");
+        System.setProperty("webdriver.gecko.driver", "geckodriver");
 
 
         plaeme1 videoReord = new plaeme1();
@@ -63,6 +64,8 @@ public class plaeme1 {
         this.screenRecorder.start();
 
     }
+
+
 
     public void stopRecording() throws Exception
     {

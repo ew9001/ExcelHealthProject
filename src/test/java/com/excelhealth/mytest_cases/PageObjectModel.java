@@ -1,45 +1,48 @@
 package com.excelhealth.mytest_cases;
 
-
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Assert;
+
+import java.io.FileInputStream;
 import java.util.concurrent.TimeUnit;
+
 import org.monte.screenrecorder.ScreenRecorder;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-
-
 import org.testng.annotations.*;
-
-import org.openqa.selenium.chrome.ChromeDriver;
-
 import com.excelhealth.page_objects.LoginPageObject;
 import com.excelhealth.page_objects.MyPortalPageObject;
-import com.excelhealth.mytest_cases.plaeme1;
-
 
 
 public class PageObjectModel extends ExtentReportClass {
 
 
+
     @Test( priority = 1 )
-    public void testLogin() {
+    public void testLogin () {
         logger = extent.createTest("testLogin");
         LoginPageObject.fillOriginTextBox(driver, "EarlW");
         LoginPageObject.filldestinationTextBox(driver, "upwork");
         LoginPageObject.clickOnSearchButton(driver);
 
+      //  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+
+
+
        // Assert.assertTrue(false);
-        Assert.assertTrue(MyPortalPageObject.myPortalObject(driver).isDisplayed());
+       // Assert.assertTrue(MyPortalPageObject.myPortalObject(driver).isDisplayed());
+        Assert.assertTrue(driver.getPageSource().contains("My Portal"));
         logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed - passTest", ExtentColor.GREEN));
     }
 
     @Test( priority = 2 )
-    public void testAdd_task() {
+    public void testAdd_task() throws Exception{
         logger = extent.createTest("testAddTask");
+        Thread.sleep(2);
         MyPortalPageObject.clickOnAddTaskButton(driver);
         MyPortalPageObject.waitforstartDateTextBox(driver);
         MyPortalPageObject.fillstartDateTextBox(driver, "2017-09-25");
@@ -49,6 +52,7 @@ public class PageObjectModel extends ExtentReportClass {
         MyPortalPageObject.filldescriptionTextBox(driver, "Task Added");
         MyPortalPageObject.fillnotesTextBox(driver,"Note: Inspection starts in 2 weeks");
         MyPortalPageObject.clickOnSubmitButton(driver);
+
         driver.navigate().refresh();
 
         Assert.assertTrue(driver.getPageSource().contains("Task Added"));
@@ -82,7 +86,6 @@ public class PageObjectModel extends ExtentReportClass {
         logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed is passTest", ExtentColor.GREEN));
 
     }
-
 
 
     @AfterTest
