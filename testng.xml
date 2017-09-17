@@ -4,8 +4,15 @@
     <test name="Login">
 
         <classes>
+
             <class name="com.excelhealth.mytest_cases.LoginPage"/>
         </classes>
+    </test>
+    <test name="Invalid Login">
+
+        <classes>
+              <class name="com.excelhealth.datadriven.UsingExcel"/>
+              </classes>
     </test>
 
 

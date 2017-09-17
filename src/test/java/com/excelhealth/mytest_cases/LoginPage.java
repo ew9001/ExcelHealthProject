@@ -3,6 +3,7 @@ package com.excelhealth.mytest_cases;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.excelhealth.utilities.Constants;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 
@@ -24,9 +25,9 @@ public class LoginPage extends BaseClass {
     public void testLogin () {
         PropertyConfigurator.configure("Log4j.properties");
         logger = extent.createTest("testLogin");
-        LoginPageObject.fillOriginTextBox(driver, "EarlW");
+        LoginPageObject.fillOriginTextBox(driver, Constants.Username);
         logger.log(Status.PASS, MarkupHelper.createLabel("User name input filled in", ExtentColor.GREEN));
-        LoginPageObject.filldestinationTextBox(driver, "upwork");
+        LoginPageObject.filldestinationTextBox(driver, Constants.Password);
         logger.log(Status.PASS, MarkupHelper.createLabel("Password filled in", ExtentColor.GREEN));
         LoginPageObject.clickOnSearchButton(driver);
         logger.log(Status.PASS, MarkupHelper.createLabel("User clicks submit", ExtentColor.GREEN));
@@ -44,7 +45,7 @@ public class LoginPage extends BaseClass {
 
         // Assert.assertTrue(false);
         // Assert.assertTrue(MyPortalPageObject.myPortalObject(driver).isDisplayed());
-        Assert.assertTrue(driver.getPageSource().contains("My Pofdgsrtal"));
+        Assert.assertTrue(driver.getPageSource().contains("My Portal"));
         logger.log(Status.PASS, MarkupHelper.createLabel("My Portal Text asserted on landing page", ExtentColor.GREEN));
         logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed - passTest", ExtentColor.GREEN));
     }

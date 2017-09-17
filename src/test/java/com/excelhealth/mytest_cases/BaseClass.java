@@ -2,6 +2,8 @@ package com.excelhealth.mytest_cases;
 
 //package extentReports;
 
+import com.excelhealth.utilities.Constants;
+import com.excelhealth.utilities.ExcelUtility;
 import jxl.Sheet;
 import jxl.Workbook;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -54,7 +56,7 @@ public class BaseClass extends Video {
         /**
          * Grabs credentials from Excel Spreadsheet
          */
-
+/*
         FileInputStream fi = new FileInputStream("all.xls");
         Workbook w = Workbook.getWorkbook(fi);
         s = w.getSheet(0);
@@ -64,7 +66,7 @@ public class BaseClass extends Video {
         String baseUrl = s.getCell(0, 2).getContents();
         System.out.println("Cell Data: " + baseUrl + username + password);
 
-
+*/
         /**
          * This test case will initialize the Webdriver Browser Instance
          */
@@ -72,13 +74,15 @@ public class BaseClass extends Video {
         System.setProperty("webdriver.gecko.driver", "geckodriver");
         System.setProperty("webdriver.chrome.driver", "chromedriver2");
 
+        ExcelUtility.setExcelFile(Constants.File_Path + Constants.File_Name, "LoginTests");
+
 
         ChromeOptions options = new ChromeOptions();
-        //  options.addArguments("headless");
+      //   options.addArguments("headless");
         options.addArguments("window-size=1440x1280");
 
         driver = new ChromeDriver(options);
-        driver.get(baseUrl);
+        driver.get(Constants.URL);
 
 
 
