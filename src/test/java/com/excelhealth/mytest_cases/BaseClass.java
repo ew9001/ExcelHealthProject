@@ -2,24 +2,15 @@ package com.excelhealth.mytest_cases;
 
 //package extentReports;
 
-import com.excelhealth.page_objects.LoginPageObject;
 import jxl.Sheet;
 import jxl.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.SkipException;
 import org.testng.annotations.*;
-import org.openqa.selenium.firefox.FirefoxBinary;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -30,31 +21,20 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-import org.monte.media.Format;
-import org.monte.media.math.Rational;
-import org.monte.screenrecorder.ScreenRecorder;
-import static org.monte.media.AudioFormatKeys.*;
-import static org.monte.media.VideoFormatKeys.*;
-
 
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.apache.commons.io.FileUtils;
 import java.io.FileInputStream;
 import java.text.SimpleDateFormat;
 // import com.relevantcodes.extentreports.LogStatus;
-import java.util.Date;
 import java.io.File;
 import org.openqa.selenium.OutputType;
 import java.util.Calendar;
-import java.io.IOException;
-import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
-import com.excelhealth.mytest_cases.plaeme1;
 
 
-public class BaseClass extends plaeme1{
+public class BaseClass extends Video {
     ExtentHtmlReporter htmlReporter;
     ExtentReports extent;
     ExtentTest logger;
@@ -132,7 +112,7 @@ public class BaseClass extends plaeme1{
         htmlReporter.config().setTheme(Theme.STANDARD);
 
         /**
-         * References plaeme1 class to start recording before each test starts
+         * References Video class to start recording before each test starts
          */
 
 

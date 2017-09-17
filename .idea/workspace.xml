@@ -17,7 +17,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/GetScreenShot.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/PageObjectModel.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/TestMeNow.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/plaeme1.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/Video.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/Guru99Login.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/LoginPageObject.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/MyPortalPageObject.java" />
@@ -154,8 +154,8 @@
       <file leaf-file-name="BaseClass.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/BaseClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="151" column="0" lean-forward="true" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+            <state relative-caret-position="30">
+              <caret line="105" column="76" lean-forward="true" selection-start-line="105" selection-start-column="76" selection-end-line="105" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -175,11 +175,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plaeme1.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/plaeme1.java">
+      <file leaf-file-name="Video.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/Video.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-275">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -825,12 +825,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.17 at 01h 58m 26s.xml">
-      <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.17 at 02h 00m 09s.xml">
-      <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.17 at 02h 01m 01s.xml">
       <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
     </history-entry>
@@ -855,6 +849,12 @@
     <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.17 at 02h 12m 55s.xml">
       <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.17 at 02h 21m 53s.xml">
+      <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.17 at 02h 22m 18s.xml">
+      <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="36" y="39" width="1988" height="1065" extended-state="0" />
@@ -869,7 +869,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24697986" sideWeight="0.5029985" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956472" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29175258" sideWeight="0.4970015" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29175258" sideWeight="0.4970015" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2799597" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1199,10 +1199,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/plaeme1.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/Video.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-275">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1211,8 +1211,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/BaseClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="151" column="0" lean-forward="true" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+        <state relative-caret-position="30">
+          <caret line="105" column="76" lean-forward="true" selection-start-line="105" selection-start-column="76" selection-end-line="105" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
