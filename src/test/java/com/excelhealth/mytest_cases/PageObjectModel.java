@@ -44,7 +44,7 @@ public class PageObjectModel extends BaseClass {
 
         // Assert.assertTrue(false);
         // Assert.assertTrue(MyPortalPageObject.myPortalObject(driver).isDisplayed());
-        Assert.assertTrue(driver.getPageSource().contains("My Portal"));
+        Assert.assertTrue(driver.getPageSource().contains("My Pofdgsrtal"));
         logger.log(Status.PASS, MarkupHelper.createLabel("My Portal Text asserted on landing page", ExtentColor.GREEN));
         logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed - passTest", ExtentColor.GREEN));
     }

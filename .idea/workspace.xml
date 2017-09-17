@@ -11,9 +11,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/utilities" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ExcelHealth.iml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/AddTask.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/BaseClass.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/DeleteTask.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/GetScreenShot.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/PageObjectModel.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/TestMeNow.java" />
@@ -36,6 +34,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/example/MetaStrip.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/example/MetaStripLocal.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/example/NewTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/example/OpenGraFacebookTester.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/example/PrintMessage.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/example/RedirectTest.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/example/localMetaStrip.java" afterPath="" />
@@ -107,7 +106,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/Suite" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/old/Suite - Safari" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/old/Suite" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/example/OpenGraFacebookTester.java" afterPath="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/Login.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Y:/Screenshots/PageLoads/20160921_150531/1--page.png" afterPath="$PROJECT_DIR$/Y:/Screenshots/PageLoads/20160921_150531/1--page.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Y:/Screenshots/PageLoads/20160921_150531/2--page.png" afterPath="$PROJECT_DIR$/Y:/Screenshots/PageLoads/20160921_150531/2--page.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Y:/Screenshots/PageLoads/20160921_153900/1--page.png" afterPath="$PROJECT_DIR$/Y:/Screenshots/PageLoads/20160921_153900/1--page.png" />
@@ -154,8 +152,8 @@
       <file leaf-file-name="BaseClass.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/BaseClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="105" column="76" lean-forward="true" selection-start-line="105" selection-start-column="76" selection-end-line="105" selection-end-column="76" />
+            <state relative-caret-position="455">
+              <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -166,8 +164,8 @@
       <file leaf-file-name="GetScreenShot.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/GetScreenShot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+            <state relative-caret-position="15">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -202,8 +200,8 @@
       <file leaf-file-name="PageObjectModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/PageObjectModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="33">
+              <caret line="16" column="48" lean-forward="true" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -333,12 +331,12 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/LoginPageObject.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/page_objects/MyPortalPageObject.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/PageObjectModel.java" />
         <option value="$PROJECT_DIR$/log4j.properties" />
         <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/BaseClasstClass.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/ExtentReportClass.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/GetScreenShot.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/plaeme1.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/PageObjectModel.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/GetScreenShot.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/BaseClass.java" />
       </list>
     </option>
@@ -825,27 +823,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.17 at 02h 01m 01s.xml">
-      <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.17 at 02h 01m 26s.xml">
-      <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.17 at 02h 03m 11s.xml">
-      <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.17 at 02h 04m 43s.xml">
-      <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.17 at 02h 09m 31s.xml">
-      <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.17 at 02h 10m 30s.xml">
-      <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.17 at 02h 12m 32s.xml">
-      <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.17 at 02h 12m 55s.xml">
       <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
     </history-entry>
@@ -853,6 +830,27 @@
       <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
     </history-entry>
     <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.17 at 02h 22m 18s.xml">
+      <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.17 at 02h 24m 34s.xml">
+      <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.17 at 02h 25m 14s.xml">
+      <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.17 at 02h 25m 39s.xml">
+      <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.17 at 02h 26m 19s.xml">
+      <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.17 at 02h 26m 58s.xml">
+      <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.17 at 02h 27m 13s.xml">
+      <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_earl_willis_Documents_workspace_WebdriverTest_testng_xml - 2017.09.17 at 02h 28m 28s.xml">
       <configuration name="/Users/earl.willis/Documents/workspace/WebdriverTest/testng.xml" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -869,7 +867,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24697986" sideWeight="0.5029985" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956472" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29175258" sideWeight="0.4970015" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29175258" sideWeight="0.4970015" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2799597" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -989,9 +987,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-          <folding>
-            <marker date="1505607527000" expanded="false" signature="569:596" ph="/unused/" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1007,9 +1003,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
           <caret line="42" column="21" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-          <folding>
-            <marker date="1505607565000" expanded="false" signature="968:995" ph="/unused/" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1033,9 +1027,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="67" lean-forward="true" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
-          <folding>
-            <marker date="1505607548000" expanded="false" signature="482:509" ph="/unused/" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1163,16 +1155,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/PageObjectModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testng2.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1189,16 +1171,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/GetScreenShot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/Video.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-275">
@@ -1209,10 +1181,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/PageObjectModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="16" column="48" lean-forward="true" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/GetScreenShot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/excelhealth/mytest_cases/BaseClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="105" column="76" lean-forward="true" selection-start-line="105" selection-start-column="76" selection-end-line="105" selection-end-column="76" />
+        <state relative-caret-position="455">
+          <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
