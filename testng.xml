@@ -4,7 +4,7 @@
     <test name="Login">
 
         <classes>
-            <class name="com.excelhealth.mytest_cases.PageObjectModel"/>
+            <class name="com.excelhealth.mytest_cases.LoginPage"/>
         </classes>
     </test>
 
