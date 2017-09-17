@@ -3,6 +3,7 @@ package com.excelhealth.mytest_cases;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
+import org.apache.log4j.Logger;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -15,27 +16,41 @@ import org.monte.screenrecorder.ScreenRecorder;
 import org.testng.annotations.*;
 import com.excelhealth.page_objects.LoginPageObject;
 import com.excelhealth.page_objects.MyPortalPageObject;
+import org.apache.log4j.PropertyConfigurator;
 
 
 public class PageObjectModel extends ExtentReportClass {
+
+    Logger log=Logger.getLogger("Login-Page for Logg4J");
 
 
 
     @Test( priority = 1 )
     public void testLogin () {
+        PropertyConfigurator.configure("Log4j.properties");
         logger = extent.createTest("testLogin");
         LoginPageObject.fillOriginTextBox(driver, "EarlW");
+        logger.log(Status.PASS, MarkupHelper.createLabel("User name input filled in", ExtentColor.GREEN));
         LoginPageObject.filldestinationTextBox(driver, "upwork");
+        logger.log(Status.PASS, MarkupHelper.createLabel("Password filled in", ExtentColor.GREEN));
         LoginPageObject.clickOnSearchButton(driver);
+        logger.log(Status.PASS, MarkupHelper.createLabel("User clicks submit", ExtentColor.GREEN));
 
-      //  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        log.info("Browser Opened");
+        log.info("Browser Opened");
+        log.info("Browser Opened");
+        log.info("Browser Opened");
+
+        //  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 
 
 
-       // Assert.assertTrue(false);
-       // Assert.assertTrue(MyPortalPageObject.myPortalObject(driver).isDisplayed());
-        Assert.assertTrue(driver.getPageSource().contains("My Portal"));
+        // Assert.assertTrue(false);
+        // Assert.assertTrue(MyPortalPageObject.myPortalObject(driver).isDisplayed());
+        Assert.assertTrue(driver.getPageSource().contains("My Poffrtal"));
+        logger.log(Status.PASS, MarkupHelper.createLabel("My Portal Text asserted on landing page", ExtentColor.GREEN));
         logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed - passTest", ExtentColor.GREEN));
     }
 
@@ -80,7 +95,7 @@ public class PageObjectModel extends ExtentReportClass {
         logger = extent.createTest("testLogout");
         MyPortalPageObject.clickonLogoutButton(driver);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-      //  Assert.assertTrue(MyPortalPageObject.addTaskButton(driver).isDisplayed()); - FAIL THE TEST
+        //  Assert.assertTrue(MyPortalPageObject.addTaskButton(driver).isDisplayed()); - FAIL THE TEST
 
         Assert.assertTrue(LoginPageObject.originTextBox(driver).isDisplayed());
         logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed is passTest", ExtentColor.GREEN));

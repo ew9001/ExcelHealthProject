@@ -94,7 +94,7 @@ public class ExtentReportClass extends plaeme1{
 
 
         ChromeOptions options = new ChromeOptions();
-       //  options.addArguments("headless");
+        //  options.addArguments("headless");
         options.addArguments("window-size=1440x1280");
 
         driver = new ChromeDriver(options);
@@ -111,7 +111,7 @@ public class ExtentReportClass extends plaeme1{
         Reporter.log("=========== Application Started ==========", true);
 
 
-        }
+    }
 
 
     @BeforeTest
@@ -150,7 +150,7 @@ public class ExtentReportClass extends plaeme1{
      * These methods @Test, will run some random pass/fail/skip scenarios
      */
 
-/*
+
     @Test
     public void passTest(){
         logger = extent.createTest("passTest");
@@ -169,15 +169,28 @@ public class ExtentReportClass extends plaeme1{
         logger = extent.createTest("skipTest");
         throw new SkipException("Skipping - This is not ready for testing ");
     }
-*/
 
 
- 
+
+
     /**
      * This method will take a screenshot after a failed test case
      */
 
     @AfterMethod
+
+    public void getResult(ITestResult result){
+        if(result.getStatus() == ITestResult.FAILURE){
+            //logger.log(Status.FAIL, "Test Case Failed is "+result.getName());
+            //MarkupHelper is used to display the output in different colors
+            logger.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " - Test Case Failed", ExtentColor.RED));
+            logger.log(Status.FAIL, MarkupHelper.createLabel(result.getThrowable() + " - Test Case Failed", ExtentColor.RED));
+        }else if(result.getStatus() == ITestResult.SKIP){
+            //logger.log(Status.SKIP, "Test Case Skipped is "+result.getName());
+            logger.log(Status.SKIP, MarkupHelper.createLabel(result.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
+        }
+    }
+
     public void tearDown(ITestResult result)
     {
 
@@ -213,16 +226,14 @@ public class ExtentReportClass extends plaeme1{
     @AfterTest
     public void endReport() throws Exception{
 
-     extent.flush();
+        extent.flush();
 
-        /**
-         * This method will stop the recorder after each test
-         */
-    screenRecorder.stop();
+
     }
 
     @AfterSuite
     public void tearDown() throws Exception {
+        screenRecorder.stop();
 
         driver.quit();
     }

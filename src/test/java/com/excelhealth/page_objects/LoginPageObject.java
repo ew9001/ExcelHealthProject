@@ -1,6 +1,8 @@
 package com.excelhealth.page_objects;
 
 
+
+import com.excelhealth.mytest_cases.ExtentReportClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-public class LoginPageObject {
+public class LoginPageObject extends ExtentReportClass{
     public static WebElement element = null;
 
     /**
@@ -26,6 +28,8 @@ public class LoginPageObject {
     public static void fillOriginTextBox(WebDriver driver, String origin) {
         element = originTextBox(driver);
         element.sendKeys(origin);
+
+
     }
 
     /**
