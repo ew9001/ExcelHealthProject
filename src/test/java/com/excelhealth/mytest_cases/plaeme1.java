@@ -21,7 +21,7 @@ import static org.monte.media.VideoFormatKeys.*;
 public class plaeme1 {
     public static ScreenRecorder screenRecorder;
 
-     @BeforeTest
+    @BeforeTest
     public static void recording() throws Exception {
 
         System.setProperty("webdriver.chrome.driver", "chromedriver2");

@@ -4,22 +4,17 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import org.apache.log4j.Logger;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Assert;
 
-import java.io.FileInputStream;
 import java.util.concurrent.TimeUnit;
 
-import org.monte.screenrecorder.ScreenRecorder;
 import org.testng.annotations.*;
 import com.excelhealth.page_objects.LoginPageObject;
 import com.excelhealth.page_objects.MyPortalPageObject;
 import org.apache.log4j.PropertyConfigurator;
 
 
-public class PageObjectModel extends ExtentReportClass {
+public class PageObjectModel extends BaseClass {
 
     Logger log=Logger.getLogger("Login-Page for Logg4J");
 
@@ -49,7 +44,7 @@ public class PageObjectModel extends ExtentReportClass {
 
         // Assert.assertTrue(false);
         // Assert.assertTrue(MyPortalPageObject.myPortalObject(driver).isDisplayed());
-        Assert.assertTrue(driver.getPageSource().contains("My Poffrtal"));
+        Assert.assertTrue(driver.getPageSource().contains("My Portal"));
         logger.log(Status.PASS, MarkupHelper.createLabel("My Portal Text asserted on landing page", ExtentColor.GREEN));
         logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed - passTest", ExtentColor.GREEN));
     }

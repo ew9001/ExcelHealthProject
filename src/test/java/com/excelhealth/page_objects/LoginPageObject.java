@@ -2,15 +2,13 @@ package com.excelhealth.page_objects;
 
 
 
-import com.excelhealth.mytest_cases.ExtentReportClass;
+import com.excelhealth.mytest_cases.BaseClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-public class LoginPageObject extends ExtentReportClass{
+public class LoginPageObject extends BaseClass {
     public static WebElement element = null;
 
     /**
@@ -110,5 +108,3 @@ public class LoginPageObject extends ExtentReportClass{
 //        element.click();
 //    }
 }
-
-

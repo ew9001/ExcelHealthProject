@@ -64,7 +64,7 @@ public class MyPortalPageObject {
      */
     public static WebElement myPortalObject(WebDriver driver) {
         element = driver.findElement(By.id("home_myfac_filter"));
-         return element;
+        return element;
 
     }
 
@@ -79,7 +79,7 @@ public class MyPortalPageObject {
 
 
 
-  //  new Select(driver.findElement(By.id("priority"))).selectByVisibleText("Low");
+    //  new Select(driver.findElement(By.id("priority"))).selectByVisibleText("Low");
 
 
 
@@ -101,7 +101,7 @@ public class MyPortalPageObject {
         WebDriverWait myWaitVar = new WebDriverWait(driver,20);
         WebElement el = myWaitVar.until(ExpectedConditions.elementToBeClickable(startdateTextBox(driver)));
         el.clear();
-     //   el.sendKeys(origin);
+        //   el.sendKeys(origin);
 
         //  element.sendKeys(origin);
     }
@@ -113,10 +113,10 @@ public class MyPortalPageObject {
 
         element = startdateTextBox(driver);
 
-     //   WebDriverWait myWaitVar = new WebDriverWait(driver,20);
-     //   WebElement el = myWaitVar.until(ExpectedConditions.elementToBeClickable(startdateTextBox(driver)));
-     //   el.clear();
-       // element.clear();
+        //   WebDriverWait myWaitVar = new WebDriverWait(driver,20);
+        //   WebElement el = myWaitVar.until(ExpectedConditions.elementToBeClickable(startdateTextBox(driver)));
+        //   el.clear();
+        // element.clear();
 
         element.sendKeys(origin);
     }
@@ -131,7 +131,7 @@ public class MyPortalPageObject {
     public static WebElement duedateTextBox(WebDriver driver) {
         element = driver.findElement(By.name("duedate"));
         return element;
-       // element.clear();
+        // element.clear();
 
     }
 
@@ -230,11 +230,11 @@ public class MyPortalPageObject {
     }
 
 
-   public static void waitforEditTaskandclick (WebDriver driver) {
+    public static void waitforEditTaskandclick (WebDriver driver) {
 
-       WebDriverWait myWaitVar = new WebDriverWait(driver,20);
-       WebElement el = myWaitVar.until(ExpectedConditions.elementToBeClickable(EditTaskButton(driver)));
-       el.click();
+        WebDriverWait myWaitVar = new WebDriverWait(driver,20);
+        WebElement el = myWaitVar.until(ExpectedConditions.elementToBeClickable(EditTaskButton(driver)));
+        el.click();
 
     }
 
@@ -321,10 +321,10 @@ public class MyPortalPageObject {
      * Click on search button
      * @param driver
      */
-  //  public static void clickOnSearchButton(WebDriver driver) {
-  //      element = searchButton(driver);
-   //     element.click();
-   // }
+    //  public static void clickOnSearchButton(WebDriver driver) {
+    //      element = searchButton(driver);
+    //     element.click();
+    // }
 
     /**
      * Navigate to flights tab
@@ -336,5 +336,3 @@ public class MyPortalPageObject {
 //        element.click();
 //    }
 }
-
-
