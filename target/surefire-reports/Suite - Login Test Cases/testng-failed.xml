@@ -6,13 +6,8 @@
       <class name="com.excelhealth.mytest_cases.LoginPage">
         <methods>
           <include name="getResult"/>
-          <include name="testLogin"/>
           <include name="skipTest"/>
-          <include name="testAdd_task"/>
           <include name="tearDown"/>
-          <include name="failTest"/>
-          <include name="testDelete_task"/>
-          <include name="testLogout"/>
           <include name="startReport"/>
           <include name="endReport"/>
           <include name="recording"/>

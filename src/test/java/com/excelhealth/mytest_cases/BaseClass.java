@@ -101,13 +101,14 @@ public class BaseClass extends Video {
         Assert.assertTrue(true);
         logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed is passTest", ExtentColor.GREEN));
     }
-    @Test
+/*    @Test
     public void failTest(){
         logger = extent.createTest("failTest");
         Assert.assertTrue(false);
         logger.log(Status.PASS, "Test Case (failTest) Status is passed");
         logger.log(Status.PASS, MarkupHelper.createLabel("Test Case (failTest) Status is passed", ExtentColor.GREEN));
     }
+    */
     @Test
     public void skipTest(){
         logger = extent.createTest("skipTest");

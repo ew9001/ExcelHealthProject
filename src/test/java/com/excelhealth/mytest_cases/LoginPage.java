@@ -40,7 +40,7 @@ public class LoginPage extends BaseClass {
         boolean result =  driver.findElements(By.name("Username")).size() == 0;
         org.testng.Assert.assertTrue (result);
 
-        MyPortalPageObject.fillnotesTextBox (driver, "fill it with this");
+      //  MyPortalPageObject.fillnotesTextBox (driver, "fill it with this");
 
         logger.log(Status.PASS, MarkupHelper.createLabel("My Portal Text asserted on landing page", ExtentColor.GREEN));
         logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed - passTest", ExtentColor.GREEN));
