@@ -9,6 +9,7 @@ import org.junit.Assert;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.*;
 import com.excelhealth.page_objects.LoginPageObject;
 import com.excelhealth.page_objects.MyPortalPageObject;
@@ -25,27 +26,21 @@ public class LoginPage extends BaseClass {
     public void testLogin () {
         PropertyConfigurator.configure("Log4j.properties");
         logger = extent.createTest("testLogin");
-        LoginPageObject.fillOriginTextBox(driver, Constants.Username);
+        LoginPageObject.fillUsernameTextBox (driver, Constants.Username);
         logger.log(Status.PASS, MarkupHelper.createLabel("User name input filled in", ExtentColor.GREEN));
-        LoginPageObject.filldestinationTextBox(driver, Constants.Password);
+        LoginPageObject.fillpasswordTextBox (driver, Constants.Password);
         logger.log(Status.PASS, MarkupHelper.createLabel("Password filled in", ExtentColor.GREEN));
-        LoginPageObject.clickOnSearchButton(driver);
+        LoginPageObject.clickOnLoginButton (driver);
         logger.log(Status.PASS, MarkupHelper.createLabel("User clicks submit", ExtentColor.GREEN));
 
-
-        log.info("Browser Opened");
-        log.info("Browser Opened");
-        log.info("Browser Opened");
-        log.info("Browser Opened");
-
-        //  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 
+      //  Assert.assertTrue(driver.getPageSource().contains("My Portal"));
+        boolean result =  driver.findElements(By.name("Username")).size() == 0;
+        org.testng.Assert.assertTrue (result);
 
+        MyPortalPageObject.fillnotesTextBox (driver, "fill it with this");
 
-        // Assert.assertTrue(false);
-        // Assert.assertTrue(MyPortalPageObject.myPortalObject(driver).isDisplayed());
-        Assert.assertTrue(driver.getPageSource().contains("My Portal"));
         logger.log(Status.PASS, MarkupHelper.createLabel("My Portal Text asserted on landing page", ExtentColor.GREEN));
         logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed - passTest", ExtentColor.GREEN));
     }
@@ -53,7 +48,7 @@ public class LoginPage extends BaseClass {
     @Test( priority = 2 )
     public void testAdd_task() throws Exception{
         logger = extent.createTest("testAddTask");
-        Thread.sleep(2);
+      //  Thread.sleep(2);
         MyPortalPageObject.clickOnAddTaskButton(driver);
         MyPortalPageObject.waitforstartDateTextBox(driver);
         MyPortalPageObject.fillstartDateTextBox(driver, "2017-09-25");
@@ -93,7 +88,7 @@ public class LoginPage extends BaseClass {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         //  Assert.assertTrue(MyPortalPageObject.addTaskButton(driver).isDisplayed()); - FAIL THE TEST
 
-        Assert.assertTrue(LoginPageObject.originTextBox(driver).isDisplayed());
+        Assert.assertTrue(LoginPageObject.usernameTextBox(driver).isDisplayed());
         logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed is passTest", ExtentColor.GREEN));
 
     }

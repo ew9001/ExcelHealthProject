@@ -1,11 +1,9 @@
 package com.excelhealth.mytest_cases;
 
-//package extentReports;
 
 import com.excelhealth.utilities.Constants;
 import com.excelhealth.utilities.ExcelUtility;
-import jxl.Sheet;
-import jxl.Workbook;
+import com.excelhealth.utilities.Video;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
@@ -27,9 +25,8 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.apache.commons.io.FileUtils;
-import java.io.FileInputStream;
+
 import java.text.SimpleDateFormat;
-// import com.relevantcodes.extentreports.LogStatus;
 import java.io.File;
 import org.openqa.selenium.OutputType;
 import java.util.Calendar;
@@ -41,50 +38,26 @@ public class BaseClass extends Video {
     ExtentReports extent;
     ExtentTest logger;
     WebDriver driver;
-    Sheet s;
-
 
 
     static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 
-
     @BeforeSuite
-
 
     public void setupWebDriver() throws Exception {
 
-        /**
-         * Grabs credentials from Excel Spreadsheet
-         */
-/*
-        FileInputStream fi = new FileInputStream("all.xls");
-        Workbook w = Workbook.getWorkbook(fi);
-        s = w.getSheet(0);
-
-        String username = s.getCell(0, 0).getContents();
-        String password = s.getCell(0, 1).getContents();
-        String baseUrl = s.getCell(0, 2).getContents();
-        System.out.println("Cell Data: " + baseUrl + username + password);
-
-*/
-        /**
-         * This test case will initialize the Webdriver Browser Instance
-         */
 
         System.setProperty("webdriver.gecko.driver", "geckodriver");
         System.setProperty("webdriver.chrome.driver", "chromedriver2");
 
         ExcelUtility.setExcelFile(Constants.File_Path + Constants.File_Name, "LoginTests");
 
-
         ChromeOptions options = new ChromeOptions();
-      //   options.addArguments("headless");
+       // options.addArguments("headless");
         options.addArguments("window-size=1440x1280");
 
         driver = new ChromeDriver(options);
         driver.get(Constants.URL);
-
-
 
         // Maximize the browser's window
         driver.manage().window().maximize();
@@ -94,9 +67,7 @@ public class BaseClass extends Video {
 
         Reporter.log("=========== Application Started ==========", true);
 
-
     }
-
 
     @BeforeTest
     public void startReport() throws Exception{
@@ -115,21 +86,12 @@ public class BaseClass extends Video {
         htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
         htmlReporter.config().setTheme(Theme.STANDARD);
 
-        /**
-         * References Video class to start recording before each test starts
-         */
-
         screenRecorder.start();
-
-
     }
 
 
-
-
-
     /**
-     * These methods @Test, will run some random pass/fail/skip scenarios
+     * These methods @Test, will run some random pass/fail/skip scenarios with the Extent Reports, not related to the real tests
      */
 
 
@@ -154,17 +116,10 @@ public class BaseClass extends Video {
 
 
 
-
-    /**
-     * This method will take a screenshot after a failed test case
-     */
-
     @AfterMethod
 
    public void getResult(ITestResult result) {
         if (result.getStatus () == ITestResult.FAILURE) {
-            //logger.log(Status.FAIL, "Test Case Failed is "+result.getName());
-            //MarkupHelper is used to display the output in different colors
             logger.log (Status.FAIL, MarkupHelper.createLabel (result.getName () + " - Test Case Failed", ExtentColor.RED));
             logger.log (Status.FAIL, MarkupHelper.createLabel (result.getThrowable () + " - Test Case Failed", ExtentColor.RED));
         } else if (result.getStatus () == ITestResult.SKIP) {
@@ -172,6 +127,10 @@ public class BaseClass extends Video {
             logger.log (Status.SKIP, MarkupHelper.createLabel (result.getName () + " - Test Case Skipped", ExtentColor.ORANGE));
         }
 
+
+        /**
+         * This method will take a screenshot after a failed test case
+         */
 
         if(ITestResult.FAILURE==result.getStatus())
         {

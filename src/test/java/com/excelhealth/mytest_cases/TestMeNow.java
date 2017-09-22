@@ -9,7 +9,6 @@ import java.util.logging.Logger;
 @SuppressWarnings("unused")
 public class TestMeNow {
 
-    Logger log = Logger.getLogger("devpinoyLogger");
 
 
     @Test
