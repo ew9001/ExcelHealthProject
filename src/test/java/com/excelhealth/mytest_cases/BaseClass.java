@@ -78,11 +78,11 @@ public class BaseClass extends Video {
         extent = new ExtentReports ();
         extent.attachReporter(htmlReporter);
         extent.setSystemInfo("Host Name", "Excel Health Portal");
-        extent.setSystemInfo("Environment", "Automation Testing Framework");
+        extent.setSystemInfo("Environment", "Test Environment");
         extent.setSystemInfo("User Name", "Excel Health");
 
-        htmlReporter.config().setDocumentTitle("Automation Reports" + timeStamp);
-        htmlReporter.config().setReportName("Excel QA Report" + timeStamp);
+        htmlReporter.config().setDocumentTitle("Automation Reports - " + timeStamp);
+        htmlReporter.config().setReportName("Excel QA Report - "  + timeStamp);
         htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
         htmlReporter.config().setTheme(Theme.STANDARD);
 

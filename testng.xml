@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
 <suite name="Suite - Login Test Cases" parallel="none">
-    <test name="LoginPage">
+       <test name="LoginPage">
         <classes>
             <class name="com.excelhealth.mytest_cases.LoginPage"/>
         </classes>

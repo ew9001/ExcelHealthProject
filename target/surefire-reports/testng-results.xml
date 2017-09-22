@@ -8,35 +8,24 @@
       <![CDATA[=========== Application Started ==========]]>
     </line>
   </reporter-output>
-  <suite name="Suite - Login Test Cases" duration-ms="19870" started-at="2017-09-22T20:57:38Z" finished-at="2017-09-22T20:57:58Z">
+  <suite name="Suite - Login Test Cases" duration-ms="20811" started-at="2017-09-22T21:12:07Z" finished-at="2017-09-22T21:12:27Z">
     <groups>
     </groups>
-    <test name="LoginPage" duration-ms="15618" started-at="2017-09-22T20:57:38Z" finished-at="2017-09-22T20:57:54Z">
+    <test name="LoginPage" duration-ms="15940" started-at="2017-09-22T21:12:07Z" finished-at="2017-09-22T21:12:23Z">
       <class name="com.excelhealth.mytest_cases.LoginPage">
-        <test-method status="PASS" signature="recording()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="recording" is-config="true" duration-ms="459" started-at="2017-09-22T16:57:38Z" finished-at="2017-09-22T16:57:39Z">
+        <test-method status="PASS" signature="recording()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="recording" is-config="true" duration-ms="389" started-at="2017-09-22T17:12:07Z" finished-at="2017-09-22T17:12:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- recording -->
-        <test-method status="PASS" signature="startReport()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="startReport" is-config="true" duration-ms="60" started-at="2017-09-22T16:57:39Z" depends-on-methods="com.excelhealth.utilities.Video.recording" finished-at="2017-09-22T16:57:39Z">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="startReport" is-config="true" duration-ms="59" started-at="2017-09-22T17:12:07Z" depends-on-methods="com.excelhealth.utilities.Video.recording" finished-at="2017-09-22T17:12:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="passTest()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="passTest" duration-ms="8" started-at="2017-09-22T16:57:39Z" finished-at="2017-09-22T16:57:39Z">
+        <test-method status="PASS" signature="passTest()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="passTest" duration-ms="9" started-at="2017-09-22T17:12:07Z" finished-at="2017-09-22T17:12:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- passTest -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="getResult" is-config="true" duration-ms="1" started-at="2017-09-22T16:57:39Z" finished-at="2017-09-22T16:57:39Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=passTest status=SUCCESS method=BaseClass.passTest()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method status="SKIP" signature="skipTest()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="skipTest" duration-ms="0" started-at="2017-09-22T16:57:39Z" finished-at="2017-09-22T16:57:39Z">
+        <test-method status="SKIP" signature="skipTest()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="skipTest" duration-ms="1" started-at="2017-09-22T17:12:07Z" finished-at="2017-09-22T17:12:07Z">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[Skipping - This is not ready for testing ]]>
@@ -83,7 +72,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- skipTest -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="getResult" is-config="true" duration-ms="0" started-at="2017-09-22T16:57:39Z" finished-at="2017-09-22T16:57:39Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="getResult" is-config="true" duration-ms="0" started-at="2017-09-22T17:12:07Z" finished-at="2017-09-22T17:12:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=passTest status=SUCCESS method=BaseClass.passTest()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="getResult" is-config="true" duration-ms="0" started-at="2017-09-22T17:12:07Z" finished-at="2017-09-22T17:12:07Z">
           <params>
             <param index="0">
               <value>
@@ -94,15 +94,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="testLogin()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="testLogin" duration-ms="11282" started-at="2017-09-22T16:57:39Z" finished-at="2017-09-22T16:57:50Z">
+        <test-method status="PASS" signature="testLogin()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="testLogin" duration-ms="11263" started-at="2017-09-22T17:12:07Z" finished-at="2017-09-22T17:12:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="testAdd_task()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="testAdd_task" duration-ms="1918" started-at="2017-09-22T16:57:50Z" finished-at="2017-09-22T16:57:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAdd_task -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="getResult" is-config="true" duration-ms="0" started-at="2017-09-22T16:57:50Z" finished-at="2017-09-22T16:57:50Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="getResult" is-config="true" duration-ms="0" started-at="2017-09-22T17:12:18Z" finished-at="2017-09-22T17:12:18Z">
           <params>
             <param index="0">
               <value>
@@ -113,7 +109,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="getResult" is-config="true" duration-ms="0" started-at="2017-09-22T16:57:52Z" finished-at="2017-09-22T16:57:52Z">
+        <test-method status="PASS" signature="testAdd_task()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="testAdd_task" duration-ms="1846" started-at="2017-09-22T17:12:18Z" finished-at="2017-09-22T17:12:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAdd_task -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="getResult" is-config="true" duration-ms="0" started-at="2017-09-22T17:12:20Z" finished-at="2017-09-22T17:12:20Z">
           <params>
             <param index="0">
               <value>
@@ -124,11 +124,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="testDelete_task()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="testDelete_task" duration-ms="1314" started-at="2017-09-22T16:57:52Z" finished-at="2017-09-22T16:57:53Z">
+        <test-method status="PASS" signature="testDelete_task()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="testDelete_task" duration-ms="1786" started-at="2017-09-22T17:12:20Z" finished-at="2017-09-22T17:12:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDelete_task -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="getResult" is-config="true" duration-ms="0" started-at="2017-09-22T16:57:53Z" finished-at="2017-09-22T16:57:53Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="getResult" is-config="true" duration-ms="0" started-at="2017-09-22T17:12:22Z" finished-at="2017-09-22T17:12:22Z">
           <params>
             <param index="0">
               <value>
@@ -139,15 +139,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="testLogout()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="testLogout" duration-ms="223" started-at="2017-09-22T16:57:53Z" finished-at="2017-09-22T16:57:53Z">
+        <test-method status="PASS" signature="testLogout()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="testLogout" duration-ms="246" started-at="2017-09-22T17:12:22Z" finished-at="2017-09-22T17:12:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogout -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="tearDown" is-config="true" duration-ms="77" started-at="2017-09-22T16:57:53Z" finished-at="2017-09-22T16:57:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="getResult" is-config="true" duration-ms="0" started-at="2017-09-22T16:57:53Z" finished-at="2017-09-22T16:57:53Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="getResult" is-config="true" duration-ms="0" started-at="2017-09-22T17:12:22Z" finished-at="2017-09-22T17:12:22Z">
           <params>
             <param index="0">
               <value>
@@ -158,15 +154,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="endReport" is-config="true" duration-ms="270" started-at="2017-09-22T16:57:54Z" depends-on-methods="com.excelhealth.mytest_cases.LoginPage.tearDown" finished-at="2017-09-22T16:57:54Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="tearDown" is-config="true" duration-ms="78" started-at="2017-09-22T17:12:22Z" finished-at="2017-09-22T17:12:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="endReport" is-config="true" duration-ms="256" started-at="2017-09-22T17:12:22Z" depends-on-methods="com.excelhealth.mytest_cases.LoginPage.tearDown" finished-at="2017-09-22T17:12:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
       </class> <!-- com.excelhealth.mytest_cases.LoginPage -->
     </test> <!-- LoginPage -->
-    <test name="Invalid Login" duration-ms="4243" started-at="2017-09-22T20:57:54Z" finished-at="2017-09-22T20:57:58Z">
+    <test name="Invalid Login" duration-ms="4512" started-at="2017-09-22T21:12:23Z" finished-at="2017-09-22T21:12:27Z">
       <class name="com.excelhealth.mytest_cases.LoginPage">
-        <test-method status="PASS" signature="setupWebDriver()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="setupWebDriver" is-config="true" duration-ms="2725" started-at="2017-09-22T16:57:35Z" finished-at="2017-09-22T16:57:38Z">
+        <test-method status="PASS" signature="setupWebDriver()[pri:0, instance:com.excelhealth.mytest_cases.LoginPage@5f375618]" name="setupWebDriver" is-config="true" duration-ms="2592" started-at="2017-09-22T17:12:04Z" finished-at="2017-09-22T17:12:07Z">
           <reporter-output>
             <line>
               <![CDATA[=========== Browser Session Started ===========]]>
@@ -178,11 +178,11 @@
         </test-method> <!-- setupWebDriver -->
       </class> <!-- com.excelhealth.mytest_cases.LoginPage -->
       <class name="com.excelhealth.datadriven.InvalidLogin">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.excelhealth.datadriven.InvalidLogin@39aeed2f]" name="setUp" is-config="true" duration-ms="1657" started-at="2017-09-22T16:57:54Z" finished-at="2017-09-22T16:57:55Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.excelhealth.datadriven.InvalidLogin@39aeed2f]" name="setUp" is-config="true" duration-ms="1856" started-at="2017-09-22T17:12:23Z" finished-at="2017-09-22T17:12:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testUsingExcel(java.lang.String, java.lang.String)[pri:0, instance:com.excelhealth.datadriven.InvalidLogin@39aeed2f]" name="testUsingExcel" duration-ms="425" started-at="2017-09-22T16:57:55Z" data-provider="loginData" finished-at="2017-09-22T16:57:56Z">
+        <test-method status="PASS" signature="testUsingExcel(java.lang.String, java.lang.String)[pri:0, instance:com.excelhealth.datadriven.InvalidLogin@39aeed2f]" name="testUsingExcel" duration-ms="405" started-at="2017-09-22T17:12:25Z" data-provider="loginData" finished-at="2017-09-22T17:12:25Z">
           <params>
             <param index="0">
               <value>
@@ -198,7 +198,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUsingExcel -->
-        <test-method status="PASS" signature="testUsingExcel(java.lang.String, java.lang.String)[pri:0, instance:com.excelhealth.datadriven.InvalidLogin@39aeed2f]" name="testUsingExcel" duration-ms="297" started-at="2017-09-22T16:57:56Z" data-provider="loginData" finished-at="2017-09-22T16:57:56Z">
+        <test-method status="PASS" signature="testUsingExcel(java.lang.String, java.lang.String)[pri:0, instance:com.excelhealth.datadriven.InvalidLogin@39aeed2f]" name="testUsingExcel" duration-ms="269" started-at="2017-09-22T17:12:25Z" data-provider="loginData" finished-at="2017-09-22T17:12:25Z">
           <params>
             <param index="0">
               <value>
@@ -214,7 +214,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUsingExcel -->
-        <test-method status="PASS" signature="testUsingExcel(java.lang.String, java.lang.String)[pri:0, instance:com.excelhealth.datadriven.InvalidLogin@39aeed2f]" name="testUsingExcel" duration-ms="288" started-at="2017-09-22T16:57:56Z" data-provider="loginData" finished-at="2017-09-22T16:57:57Z">
+        <test-method status="PASS" signature="testUsingExcel(java.lang.String, java.lang.String)[pri:0, instance:com.excelhealth.datadriven.InvalidLogin@39aeed2f]" name="testUsingExcel" duration-ms="287" started-at="2017-09-22T17:12:25Z" data-provider="loginData" finished-at="2017-09-22T17:12:26Z">
           <params>
             <param index="0">
               <value>
@@ -230,7 +230,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUsingExcel -->
-        <test-method status="PASS" signature="testUsingExcel(java.lang.String, java.lang.String)[pri:0, instance:com.excelhealth.datadriven.InvalidLogin@39aeed2f]" name="testUsingExcel" duration-ms="261" started-at="2017-09-22T16:57:57Z" data-provider="loginData" finished-at="2017-09-22T16:57:57Z">
+        <test-method status="PASS" signature="testUsingExcel(java.lang.String, java.lang.String)[pri:0, instance:com.excelhealth.datadriven.InvalidLogin@39aeed2f]" name="testUsingExcel" duration-ms="308" started-at="2017-09-22T17:12:26Z" data-provider="loginData" finished-at="2017-09-22T17:12:26Z">
           <params>
             <param index="0">
               <value>
@@ -246,7 +246,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUsingExcel -->
-        <test-method status="PASS" signature="testUsingExcel(java.lang.String, java.lang.String)[pri:0, instance:com.excelhealth.datadriven.InvalidLogin@39aeed2f]" name="testUsingExcel" duration-ms="307" started-at="2017-09-22T16:57:57Z" data-provider="loginData" finished-at="2017-09-22T16:57:57Z">
+        <test-method status="PASS" signature="testUsingExcel(java.lang.String, java.lang.String)[pri:0, instance:com.excelhealth.datadriven.InvalidLogin@39aeed2f]" name="testUsingExcel" duration-ms="350" started-at="2017-09-22T17:12:26Z" data-provider="loginData" finished-at="2017-09-22T17:12:26Z">
           <params>
             <param index="0">
               <value>
@@ -262,7 +262,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUsingExcel -->
-        <test-method status="PASS" signature="testUsingExcel(java.lang.String, java.lang.String)[pri:0, instance:com.excelhealth.datadriven.InvalidLogin@39aeed2f]" name="testUsingExcel" duration-ms="298" started-at="2017-09-22T16:57:57Z" data-provider="loginData" finished-at="2017-09-22T16:57:57Z">
+        <test-method status="PASS" signature="testUsingExcel(java.lang.String, java.lang.String)[pri:0, instance:com.excelhealth.datadriven.InvalidLogin@39aeed2f]" name="testUsingExcel" duration-ms="286" started-at="2017-09-22T17:12:26Z" data-provider="loginData" finished-at="2017-09-22T17:12:27Z">
           <params>
             <param index="0">
               <value>
@@ -278,7 +278,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUsingExcel -->
-        <test-method status="PASS" signature="testUsingExcel(java.lang.String, java.lang.String)[pri:0, instance:com.excelhealth.datadriven.InvalidLogin@39aeed2f]" name="testUsingExcel" duration-ms="282" started-at="2017-09-22T16:57:57Z" data-provider="loginData" finished-at="2017-09-22T16:57:58Z">
+        <test-method status="PASS" signature="testUsingExcel(java.lang.String, java.lang.String)[pri:0, instance:com.excelhealth.datadriven.InvalidLogin@39aeed2f]" name="testUsingExcel" duration-ms="284" started-at="2017-09-22T17:12:27Z" data-provider="loginData" finished-at="2017-09-22T17:12:27Z">
           <params>
             <param index="0">
               <value>
@@ -294,7 +294,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUsingExcel -->
-        <test-method status="PASS" signature="testUsingExcel(java.lang.String, java.lang.String)[pri:0, instance:com.excelhealth.datadriven.InvalidLogin@39aeed2f]" name="testUsingExcel" duration-ms="292" started-at="2017-09-22T16:57:58Z" data-provider="loginData" finished-at="2017-09-22T16:57:58Z">
+        <test-method status="PASS" signature="testUsingExcel(java.lang.String, java.lang.String)[pri:0, instance:com.excelhealth.datadriven.InvalidLogin@39aeed2f]" name="testUsingExcel" duration-ms="298" started-at="2017-09-22T17:12:27Z" data-provider="loginData" finished-at="2017-09-22T17:12:27Z">
           <params>
             <param index="0">
               <value>
@@ -310,7 +310,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUsingExcel -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.excelhealth.datadriven.InvalidLogin@39aeed2f]" name="tearDown" is-config="true" duration-ms="122" started-at="2017-09-22T16:57:58Z" finished-at="2017-09-22T16:57:58Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.excelhealth.datadriven.InvalidLogin@39aeed2f]" name="tearDown" is-config="true" duration-ms="155" started-at="2017-09-22T17:12:27Z" finished-at="2017-09-22T17:12:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
