@@ -7,12 +7,13 @@
   <artifactId>WebdriverTest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <dependencies>            
-        <dependency>              
+ <!--       <dependency>
              <groupId>junit</groupId>                               
              <artifactId>junit</artifactId>                             
              <version>3.8.1</version>                               
              <scope>test</scope>                                
-        </dependency>             
+        </dependency>
+ -->
         <dependency>              
             <groupId>org.seleniumhq.selenium</groupId>                              
             <artifactId>selenium-java</artifactId>                              
@@ -88,6 +89,11 @@
           <groupId>org.freemarker</groupId>
           <artifactId>freemarker</artifactId>
           <version>2.3.23</version>
+      </dependency>
+      <dependency>
+          <groupId>com.google.guava</groupId>
+          <artifactId>guava</artifactId>
+          <version>21.0</version>
       </dependency>
       <dependency>
           <groupId>org.mongodb</groupId>

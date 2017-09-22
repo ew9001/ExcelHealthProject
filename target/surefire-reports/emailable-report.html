@@ -31,127 +31,269 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Login</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">4</td><td class="numi">1.6 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">LoginPage</td><td class="numi">1</td><td class="numi">1</td><td class="numi_attn">1</td><td class="numi_attn">5</td><td class="numi">14.5 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em">Invalid Login</td><td class="numi">8</td><td class="numi">8</td><td class="numi">0</td><td class="numi">0</td><td class="numi">4.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="total"><td>Total</td>
+<td class="numi">9</td><td class="numi">9</td><td class="numi_attn">1</td><td class="numi_attn">5</td><td class="numi">19.2 seconds</td><td colspan="2">&nbsp;</td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Login &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="4">com.excelhealth.mytest_cases.PageObjectModel</td><td><a href="#m1"><b>testLogin</b>  </a></td><td class="numi">1</td><td>1505442869418</td><td class="numi">11</td></tr><tr class="failedodd"><td><a href="#m2"><b>testAdd_task</b>  </a></td><td class="numi">1</td><td>1505442869442</td><td class="numi">8</td></tr><tr class="failedodd"><td><a href="#m3"><b>testDelete_task</b>  </a></td><td class="numi">1</td><td>1505442869456</td><td class="numi">6</td></tr><tr class="failedodd"><td><a href="#m4"><b>testLogout</b>  </a></td><td class="numi">1</td><td>1505442869467</td><td class="numi">4</td></tr>
+<tr><th colspan="4">LoginPage &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="5">com.excelhealth.mytest_cases.LoginPage</td><td><a href="#m1"><b>failTest</b>  </a></td><td class="numi">1</td><td>1506113506712</td><td class="numi">5</td></tr><tr class="failedodd"><td><a href="#m2"><b>testLogin</b>  </a></td><td class="numi">1</td><td>1506113507405</td><td class="numi">12739</td></tr><tr class="failedodd"><td><a href="#m3"><b>testAdd_task</b>  </a></td><td class="numi">1</td><td>1506113520166</td><td class="numi">3</td></tr><tr class="failedodd"><td><a href="#m4"><b>testDelete_task</b>  </a></td><td class="numi">1</td><td>1506113520174</td><td class="numi">3</td></tr><tr class="failedodd"><td><a href="#m5"><b>testLogout</b>  </a></td><td class="numi">1</td><td>1506113520182</td><td class="numi">2</td></tr>
+<tr><th colspan="4">LoginPage &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="1">com.excelhealth.mytest_cases.LoginPage</td><td><a href="#m6"><b>skipTest</b>  </a></td><td class="numi">1</td><td>1506113507404</td><td class="numi">1</td></tr>
+<tr><th colspan="4">LoginPage &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="1">com.excelhealth.mytest_cases.LoginPage</td><td><a href="#m7"><b>passTest</b>  </a></td><td class="numi">1</td><td>1506113507403</td><td class="numi">1</td></tr>
+<tr><th colspan="4">Invalid Login &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="8">com.excelhealth.datadriven.InvalidLogin</td><td><a href="#m8"><b>testUsingExcel</b>  </a></td><td class="numi">8</td><td>1506113522612</td><td class="numi">2590</td></tr><tr class="passedodd"><td><a href="#m9"><b>testUsingExcel</b>  </a></td><td class="numi">8</td><td>1506113522612</td><td class="numi">2590</td></tr><tr class="passedodd"><td><a href="#m10"><b>testUsingExcel</b>  </a></td><td class="numi">8</td><td>1506113522612</td><td class="numi">2590</td></tr><tr class="passedodd"><td><a href="#m11"><b>testUsingExcel</b>  </a></td><td class="numi">8</td><td>1506113522612</td><td class="numi">2590</td></tr><tr class="passedodd"><td><a href="#m12"><b>testUsingExcel</b>  </a></td><td class="numi">8</td><td>1506113522612</td><td class="numi">2590</td></tr><tr class="passedodd"><td><a href="#m13"><b>testUsingExcel</b>  </a></td><td class="numi">8</td><td>1506113522612</td><td class="numi">2590</td></tr><tr class="passedodd"><td><a href="#m14"><b>testUsingExcel</b>  </a></td><td class="numi">8</td><td>1506113522612</td><td class="numi">2590</td></tr><tr class="passedodd"><td><a href="#m15"><b>testUsingExcel</b>  </a></td><td class="numi">8</td><td>1506113522612</td><td class="numi">2590</td></tr>
 </table>
-<h1>Login</h1>
-<h2 id="m1">com.excelhealth.mytest_cases.PageObjectModel:testAdd_task</h2>
+<h1>LoginPage</h1>
+<h2 id="m1">com.excelhealth.mytest_cases.LoginPage:testLogout</h2>
 <div style="padding-left:3em">
-<p>chrome not reachable
-  (Session info: chrome=61.0.3163.91)
+<p>no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=61.0.3163.100)
   (Driver info: chromedriver=2.31.488774 (7e15618d1bf16df8bf0ecf2914ed1964a387ba0b),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 5 milliseconds
-Build info: version: &apos;2.48.0&apos;, revision: &apos;b7b081a4f1289f17e8ecd38bc67e137c2a12e34a&apos;, time: &apos;2015-10-07 09:50:14&apos;
-System info: host: &apos;US-NYC-WKS16116.globalservs.com&apos;, ip: &apos;10.142.127.126&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_91&apos;
+Command duration or timeout: 2 milliseconds
+Build info: version: &apos;3.3.0&apos;, revision: &apos;b526bd5b41&apos;, time: &apos;2017-03-07 19:26:04 +0000&apos;
+System info: host: &apos;US-NYC-WKS16116.globalservs.com&apos;, ip: &apos;fe80:0:0:0:f65c:89ff:fea3:a5ad%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_91&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488774 (7e15618d1bf16df8bf0ecf2914ed1964a387ba0b), userDataDir=/var/folders/h6/7n562mb125g9m3y_n6ygbwqw0rymmr/T/.org.chromium.Chromium.R34QLY}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.91, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 368b037feffb0a123482d156372be7e6
-*** Element info: {Using=tag name, value=i}</p>
-sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByTagName(RemoteWebDriver.java:435)
-<br/>at org.openqa.selenium.By$ByTagName.findElement(By.java:334)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:345)
-<br/>at com.excelhealth.page_objects.MyPortalPageObject.addTaskButton(MyPortalPageObject.java:44)
-<br/>at com.excelhealth.page_objects.MyPortalPageObject.clickOnAddTaskButton(MyPortalPageObject.java:55)
-<br/>at com.excelhealth.mytest_cases.PageObjectModel.testAdd_task(PageObjectModel.java:35)
-<br/>34 lines not shown
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">com.excelhealth.mytest_cases.PageObjectModel:testDelete_task</h2>
-<div style="padding-left:3em">
-<p>chrome not reachable
-  (Session info: chrome=61.0.3163.91)
-  (Driver info: chromedriver=2.31.488774 (7e15618d1bf16df8bf0ecf2914ed1964a387ba0b),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 5 milliseconds
-Build info: version: &apos;2.48.0&apos;, revision: &apos;b7b081a4f1289f17e8ecd38bc67e137c2a12e34a&apos;, time: &apos;2015-10-07 09:50:14&apos;
-System info: host: &apos;US-NYC-WKS16116.globalservs.com&apos;, ip: &apos;10.142.127.126&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_91&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488774 (7e15618d1bf16df8bf0ecf2914ed1964a387ba0b), userDataDir=/var/folders/h6/7n562mb125g9m3y_n6ygbwqw0rymmr/T/.org.chromium.Chromium.R34QLY}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.91, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 368b037feffb0a123482d156372be7e6
-*** Element info: {Using=xpath, value=//*[@id=&apos;home_tasks&apos;]/tbody/tr/td[2]/span}</p>
-sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:490)
-<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:345)
-<br/>at com.excelhealth.page_objects.MyPortalPageObject.clickOnDescription(MyPortalPageObject.java:227)
-<br/>at com.excelhealth.mytest_cases.PageObjectModel.testDelete_task(PageObjectModel.java:54)
-<br/>34 lines not shown
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">com.excelhealth.mytest_cases.PageObjectModel:testLogout</h2>
-<div style="padding-left:3em">
-<p>chrome not reachable
-  (Session info: chrome=61.0.3163.91)
-  (Driver info: chromedriver=2.31.488774 (7e15618d1bf16df8bf0ecf2914ed1964a387ba0b),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4 milliseconds
-Build info: version: &apos;2.48.0&apos;, revision: &apos;b7b081a4f1289f17e8ecd38bc67e137c2a12e34a&apos;, time: &apos;2015-10-07 09:50:14&apos;
-System info: host: &apos;US-NYC-WKS16116.globalservs.com&apos;, ip: &apos;10.142.127.126&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_91&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488774 (7e15618d1bf16df8bf0ecf2914ed1964a387ba0b), userDataDir=/var/folders/h6/7n562mb125g9m3y_n6ygbwqw0rymmr/T/.org.chromium.Chromium.R34QLY}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.91, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 368b037feffb0a123482d156372be7e6
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488774 (7e15618d1bf16df8bf0ecf2914ed1964a387ba0b), userDataDir=/var/folders/h6/7n562mb125g9m3y_n6ygbwqw0rymmr/T/.org.chromium.Chromium.dpwlgf}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 0d0b6f66ddb85685178a18ae1d0308f1
 *** Element info: {Using=link text, value=Logout}</p>
 sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 <br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 <br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 <br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:418)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
 <br/>at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:345)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
 <br/>at com.excelhealth.page_objects.MyPortalPageObject.logoutButton(MyPortalPageObject.java:22)
 <br/>at com.excelhealth.page_objects.MyPortalPageObject.clickonLogoutButton(MyPortalPageObject.java:33)
-<br/>at com.excelhealth.mytest_cases.PageObjectModel.testLogout(PageObjectModel.java:69)
+<br/>at com.excelhealth.mytest_cases.LoginPage.testLogout(LoginPage.java:88)
 <br/>34 lines not shown
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">com.excelhealth.mytest_cases.PageObjectModel:testLogin</h2>
+<h2 id="m2">com.excelhealth.mytest_cases.LoginPage:testDelete_task</h2>
 <div style="padding-left:3em">
-<p>chrome not reachable
-  (Session info: chrome=61.0.3163.91)
+<p>no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=61.0.3163.100)
   (Driver info: chromedriver=2.31.488774 (7e15618d1bf16df8bf0ecf2914ed1964a387ba0b),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 5 milliseconds
-Build info: version: &apos;2.48.0&apos;, revision: &apos;b7b081a4f1289f17e8ecd38bc67e137c2a12e34a&apos;, time: &apos;2015-10-07 09:50:14&apos;
-System info: host: &apos;US-NYC-WKS16116.globalservs.com&apos;, ip: &apos;10.142.127.126&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_91&apos;
+Command duration or timeout: 3 milliseconds
+Build info: version: &apos;3.3.0&apos;, revision: &apos;b526bd5b41&apos;, time: &apos;2017-03-07 19:26:04 +0000&apos;
+System info: host: &apos;US-NYC-WKS16116.globalservs.com&apos;, ip: &apos;fe80:0:0:0:f65c:89ff:fea3:a5ad%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_91&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488774 (7e15618d1bf16df8bf0ecf2914ed1964a387ba0b), userDataDir=/var/folders/h6/7n562mb125g9m3y_n6ygbwqw0rymmr/T/.org.chromium.Chromium.R34QLY}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.91, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 368b037feffb0a123482d156372be7e6
-*** Element info: {Using=name, value=Username}</p>
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488774 (7e15618d1bf16df8bf0ecf2914ed1964a387ba0b), userDataDir=/var/folders/h6/7n562mb125g9m3y_n6ygbwqw0rymmr/T/.org.chromium.Chromium.dpwlgf}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 0d0b6f66ddb85685178a18ae1d0308f1
+*** Element info: {Using=xpath, value=//*[@id=&apos;home_tasks&apos;]/tbody/tr/td[2]/span}</p>
 sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 <br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 <br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 <br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:451)
-<br/>at org.openqa.selenium.By$ByName.findElement(By.java:303)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:345)
-<br/>at com.excelhealth.page_objects.LoginPageObject.originTextBox(LoginPageObject.java:21)
-<br/>at com.excelhealth.page_objects.LoginPageObject.fillOriginTextBox(LoginPageObject.java:27)
-<br/>at com.excelhealth.mytest_cases.PageObjectModel.testLogin(PageObjectModel.java:19)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:476)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at com.excelhealth.page_objects.MyPortalPageObject.clickOnDescription(MyPortalPageObject.java:227)
+<br/>at com.excelhealth.mytest_cases.LoginPage.testDelete_task(LoginPage.java:73)
 <br/>34 lines not shown
 </div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">com.excelhealth.mytest_cases.LoginPage:testAdd_task</h2>
+<div style="padding-left:3em">
+<p>no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.31.488774 (7e15618d1bf16df8bf0ecf2914ed1964a387ba0b),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2 milliseconds
+Build info: version: &apos;3.3.0&apos;, revision: &apos;b526bd5b41&apos;, time: &apos;2017-03-07 19:26:04 +0000&apos;
+System info: host: &apos;US-NYC-WKS16116.globalservs.com&apos;, ip: &apos;fe80:0:0:0:f65c:89ff:fea3:a5ad%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488774 (7e15618d1bf16df8bf0ecf2914ed1964a387ba0b), userDataDir=/var/folders/h6/7n562mb125g9m3y_n6ygbwqw0rymmr/T/.org.chromium.Chromium.dpwlgf}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 0d0b6f66ddb85685178a18ae1d0308f1
+*** Element info: {Using=tag name, value=i}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByTagName(RemoteWebDriver.java:444)
+<br/>at org.openqa.selenium.By$ByTagName.findElement(By.java:334)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at com.excelhealth.page_objects.MyPortalPageObject.addTaskButton(MyPortalPageObject.java:44)
+<br/>at com.excelhealth.page_objects.MyPortalPageObject.clickOnAddTaskButton(MyPortalPageObject.java:55)
+<br/>at com.excelhealth.mytest_cases.LoginPage.testAdd_task(LoginPage.java:53)
+<br/>34 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">com.excelhealth.mytest_cases.LoginPage:testLogin</h2>
+<div style="padding-left:3em">
+<p>null</p>
+com.excelhealth.page_objects.MyPortalPageObject.fillnotesTextBox(MyPortalPageObject.java:197)
+<br/>at com.excelhealth.mytest_cases.LoginPage.testLogin(LoginPage.java:43)
+<br/>34 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">com.excelhealth.mytest_cases.LoginPage:failTest</h2>
+<div style="padding-left:3em">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at com.excelhealth.mytest_cases.BaseClass.failTest(BaseClass.java:107)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br/>at java.lang.reflect.Method.invoke(Method.java:498)
+<br/>at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+<br/>at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+<br/>at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+<br/>at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+<br/>at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+<br/>at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+<br/>at org.testng.TestRunner.privateRun(TestRunner.java:767)
+<br/>at org.testng.TestRunner.run(TestRunner.java:617)
+<br/>at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+<br/>at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+<br/>at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+<br/>at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+<br/>at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+<br/>at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+<br/>at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+<br/>at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+<br/>at org.testng.TestNG.run(TestNG.java:1031)
+<br/>at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)
+<br/>at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
+<br/>at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br/>at java.lang.reflect.Method.invoke(Method.java:498)
+<br/>at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+<br/>at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+<br/>at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+<br/>at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+<br/>at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+<br/>1 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">com.excelhealth.mytest_cases.LoginPage:skipTest</h2>
+<div style="padding-left:3em">
+<p>Skipping - This is not ready for testing </p>
+com.excelhealth.mytest_cases.BaseClass.skipTest(BaseClass.java:114)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br/>at java.lang.reflect.Method.invoke(Method.java:498)
+<br/>at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+<br/>at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+<br/>at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+<br/>at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+<br/>at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+<br/>at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+<br/>at org.testng.TestRunner.privateRun(TestRunner.java:767)
+<br/>at org.testng.TestRunner.run(TestRunner.java:617)
+<br/>at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+<br/>at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+<br/>at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+<br/>at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+<br/>at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+<br/>at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+<br/>at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+<br/>at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+<br/>at org.testng.TestNG.run(TestNG.java:1031)
+<br/>at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)
+<br/>at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
+<br/>at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br/>at java.lang.reflect.Method.invoke(Method.java:498)
+<br/>at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+<br/>at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+<br/>at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+<br/>at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+<br/>at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+<br/>1 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">com.excelhealth.mytest_cases.LoginPage:passTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Invalid Login</h1>
+<h2 id="m8">com.excelhealth.datadriven.InvalidLogin:testUsingExcel</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>email@email.com</td>
+<td>test</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">com.excelhealth.datadriven.InvalidLogin:testUsingExcel</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>email@email.com</td>
+<td>test</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">com.excelhealth.datadriven.InvalidLogin:testUsingExcel</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>email@email.com</td>
+<td>test</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">com.excelhealth.datadriven.InvalidLogin:testUsingExcel</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>emfdsail@email.com</td>
+<td>test</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">com.excelhealth.datadriven.InvalidLogin:testUsingExcel</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>email@email.com</td>
+<td>test</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">com.excelhealth.datadriven.InvalidLogin:testUsingExcel</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>email@email.com</td>
+<td>test</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m14">com.excelhealth.datadriven.InvalidLogin:testUsingExcel</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>email@email.com</td>
+<td>test</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m15">com.excelhealth.datadriven.InvalidLogin:testUsingExcel</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>test@email.com</td>
+<td>test</td>
+</tr>
+</table>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

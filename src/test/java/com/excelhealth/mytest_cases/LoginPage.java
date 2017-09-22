@@ -18,13 +18,14 @@ import org.apache.log4j.PropertyConfigurator;
 
 public class LoginPage extends BaseClass {
 
-    Logger log=Logger.getLogger("Login-Page for Logg4J");
+ //   Logger log=Logger.getLogger("Login-Page for Logg4J");
 
 
 
     @Test( priority = 1 )
     public void testLogin () {
         PropertyConfigurator.configure("Log4j.properties");
+
         logger = extent.createTest("testLogin");
         LoginPageObject.fillUsernameTextBox (driver, Constants.Username);
         logger.log(Status.PASS, MarkupHelper.createLabel("User name input filled in", ExtentColor.GREEN));
